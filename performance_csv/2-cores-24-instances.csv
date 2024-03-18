@@ -1,0 +1,22 @@
+,Cores & Instances,Query/Model,Dataset size,Execution Time,CPU Usage
+0,2 cores & 24 instances - 2W,Sample loading,100,22.530866384506226,26.6
+1,2 cores & 24 instances - 2W,Query 1,100,7.914539337158203,21.0
+2,2 cores & 24 instances - 2W,Query 2,100,6.599513053894043,17.7
+3,2 cores & 24 instances - 2W,Query 3,100,10.584243297576904,19.4
+4,2 cores & 24 instances - 2W,Liner Regression,100,54.19126653671265,15.5
+5,2 cores & 24 instances - 2W,Decison Tree,100,39.541343212127686,12.1
+6,2 cores & 24 instances - 2W,Random Forest Regression,100,36.50941705703735,9.9
+7,2 cores & 24 instances - 2W,Sample loading,700,18.96671867370605,7.1
+8,2 cores & 24 instances - 2W,Query 1,700,4.991479158401489,8.0
+9,2 cores & 24 instances - 2W,Query 2,700,5.54355001449585,6.1
+10,2 cores & 24 instances - 2W,Query 3,700,9.51615571975708,7.4
+11,2 cores & 24 instances - 2W,Liner Regression,700,53.53194093704224,8.8
+12,2 cores & 24 instances - 2W,Decision Tree,700,42.967514991760254,8.8
+13,2 cores & 24 instances - 2W,Random Forest Regression,700,38.59827446937561,6.8
+14,2 cores & 24 instances - 2W,Sample loading,1300,44.42172455787659,10.2
+15,2 cores & 24 instances - 2W,Query 1,1300,4.779296875,6.4
+16,2 cores & 24 instances - 2W,Query 2,1300,5.265874624252319,6.5
+17,2 cores & 24 instances - 2W,Query 3,1300,9.171047449111938,7.0
+18,2 cores & 24 instances - 2W,Liner Regression,1300,54.29291820526123,7.5
+19,2 cores & 24 instances - 2W,Decision Tree,1300,43.8225736618042,6.7
+20,2 cores & 24 instances - 2W,Random Forest Regression,1300,38.705156326293945,8.0

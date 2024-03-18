@@ -1,0 +1,415 @@
+-----------------------------------------
+----------- Price Prediction ------------
+-----------------------------------------
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- posting_date: date (nullable = true)
+ |-- age: double (nullable = true)
+ |-- row_num: integer (nullable = true)
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- age: double (nullable = true)
+
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+----+
+|index|price|year|manufacturer|               model|condition|  fuel|odometer|title_status|transmission|    type| age|
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+----+
+|    2|24990|2007|        ford|super duty f-450 drw|     good|   gas|   46463|       clean|   automatic|   truck|null|
+|    3|41000|2019|        mini|        t camper van|excellent|   gas|   29288|       clean|   automatic|     van|null|
+|    4|28990|2008|        ford|super duty f-450 drw|     good|   gas|  118078|       clean|   automatic|   truck|13.0|
+|    5| 4200|2007|       honda|             odyssey|     good|   gas|  195000|       clean|   automatic|mini-van|14.0|
+|    6|20000|2014|        jeep|      grand cherokee| like new|   gas|  167821|       clean|   automatic|     SUV| 7.0|
+|    8|11999|2013|        audi|a4 2.0t premium plus| like new|   gas|   96000|       clean|   automatic|   sedan| 8.0|
+|   12|16600|2014|       acura|      rdx technology|     good|   gas|  100784|       clean|   automatic|     SUV| 7.0|
+|   17| 9995|2010|       honda|             odyssey|excellent|   gas|  160964|       clean|   automatic|mini-van|11.0|
+|   19| 8950|2009|       lexus|      is 250 awd nav|     good|   gas|  134730|       clean|   automatic|   sedan|12.0|
+|   20| 6700|2014|    chrysler|                 200|     good|   gas|  110000|        lien|   automatic|   sedan| 7.0|
+|   24|34999|2014|      toyota|          tundra sr5|excellent|   gas|   47615|       clean|   automatic|   truck| 7.0|
+|   25|29999|2016|        ford|         transit xlt|excellent|   gas|   40717|       clean|   automatic|mini-van| 5.0|
+|   26|13900|2013|      toyota|             rav4 le|excellent|   gas|   92965|        lien|   automatic|     SUV| 8.0|
+|   27|15999|2015|   chevrolet|          equinox ls|     good|   gas|   54484|       clean|   automatic|     SUV| 6.0|
+|   28|29999|2015|         ram|            1500 slt|     good|   gas|   66366|       clean|   automatic|   truck| 6.0|
+|   29|10730|2011|   chevrolet|      silverado 1500|     fair|   gas|  131700|     rebuilt|   automatic|   truck|10.0|
+|   30|15500|2013|       honda|              accord| like new|   gas|   60000|       clean|   automatic|   sedan| 8.0|
+|   35|39000|2017|        ford|         transit 350|excellent|   gas|   58000|        lien|   automatic|     van|null|
+|   36|21500|2006|        ford|     f450 super duty|     good|diesel|   93182|       clean|   automatic|   truck|15.0|
+|   37|29990|2017|      nissan|titan crew cab sv...|     good|   gas|   35045|       clean|   automatic|  pickup| 4.0|
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+----+
+only showing top 20 rows
+
+Categorical features: ['year', 'manufacturer', 'model', 'condition', 'fuel', 'title_status', 'transmission', 'type']
+
+
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|price|odometer| age|year|manufacturer| model|condition|fuel|title_status|transmission|type|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|19500| 66898.0| 6.0| 3.0|         5.0|5403.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+| 7500|106000.0|12.0|11.0|        11.0|  74.0|      4.0| 0.0|         2.0|         0.0| 0.0|
+| 6249| 64754.0| 7.0| 1.0|         4.0| 561.0|      1.0| 3.0|         0.0|         0.0| 4.0|
+|14750| 88200.0|10.0| 4.0|         5.0|1383.0|      1.0| 0.0|         0.0|         0.0| 1.0|
+|10500|101028.0| 8.0| 0.0|         9.0|3721.0|      2.0| 0.0|         3.0|         0.0| 1.0|
+|32000|155000.0|10.0| 4.0|        12.0| 101.0|      1.0| 1.0|         0.0|         0.0| 3.0|
+|11995| 99002.0| 8.0| 0.0|         5.0|  54.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|15999| 50000.0| 8.0| 0.0|         4.0|1563.0|      0.0| 0.0|         0.0|         1.0| 1.0|
+|14499| 59880.0| 7.0| 1.0|         9.0|  63.0|      1.0| 0.0|         0.0|         0.0| 1.0|
+|28750| 42000.0| 3.0| 9.0|        15.0|8229.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+| 6995|179000.0|21.0|20.0|         1.0|9178.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+|18995|108853.0|null| 1.0|        28.0| 286.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+|24990| 46463.0|null|10.0|         0.0| 198.0|      1.0| 0.0|         0.0|         0.0| 2.0|
+|14995|108731.0|13.0| 7.0|         1.0|   1.0|      0.0| 0.0|         0.0|         0.0| 3.0|
+| 4500|156000.0|14.0|10.0|         2.0|   2.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+| 9995| 91611.0|null| 7.0|         7.0|1892.0|      0.0| 0.0|         0.0|         0.0| 6.0|
+| 4999|164000.0|null|10.0|         3.0|   4.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|11995|144323.0|null| 1.0|         8.0| 937.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+|10800|129300.0|null| 3.0|         6.0|  86.0|      1.0| 0.0|         0.0|         0.0|10.0|
+| 7495|123069.0|11.0| 8.0|        10.0| 995.0|      0.0| 0.0|         0.0|         0.0| 0.0|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+only showing top 20 rows
+
+root
+ |-- price: long (nullable = true)
+ |-- odometer: double (nullable = true)
+ |-- age: double (nullable = true)
+ |-- year: double (nullable = false)
+ |-- manufacturer: double (nullable = false)
+ |-- model: double (nullable = false)
+ |-- condition: double (nullable = false)
+ |-- fuel: double (nullable = false)
+ |-- title_status: double (nullable = false)
+ |-- transmission: double (nullable = false)
+ |-- type: double (nullable = false)
+
+
+--- ML dataset ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+|19500|(10,[0,1,2,3,4],[...|
+| 7500|[106000.0,12.0,11...|
+| 6249|[64754.0,7.0,1.0,...|
+|14750|[88200.0,10.0,4.0...|
+|10500|[101028.0,8.0,0.0...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Train Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Test Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,4],[53...|
+| 2000|[197.0,15.0,12.0,...|
+| 2000|[68000.0,10.0,4.0...|
+| 2000|[101954.0,5.0,6.0...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Data Used for the Prediction---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2100|[190000.0,20.0,19...|
+| 2499|[143109.0,18.0,16...|
+| 2500|[112946.0,8.0,0.0...|
+| 2500|[192922.0,17.0,14...|
+| 2750|[73095.0,16.0,13....|
++-----+--------------------+
+only showing top 5 rows
+
+    ------- Linear Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.46383
+Adjusted R² : 0.46383
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 56053213.7473
+RMSE    : 7486.87
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 5624.39
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...| 563.0801690160333|
+| 2499|[143109.0,18.0,16...| 4876.507293760635|
+| 2500|[112946.0,8.0,0.0...| 12347.16905047939|
+| 2500|[192922.0,17.0,14...| 4460.224020806494|
+| 2750|[73095.0,16.0,13....|13381.376588838213|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Lasso Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.46383
+Adjusted R² : 0.46383
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 56053216.9174
+RMSE    : 7486.87
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 5624.39
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...| 563.0843576991247|
+| 2499|[143109.0,18.0,16...| 4876.506560810794|
+| 2500|[112946.0,8.0,0.0...|12347.367132855456|
+| 2500|[192922.0,17.0,14...| 4460.237850590744|
+| 2750|[73095.0,16.0,13....|13381.291673218719|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Ridge Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.46383
+Adjusted R² : 0.46383
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 56053181.0574
+RMSE    : 7486.87
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 5624.39
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...| 563.1573310803251|
+| 2499|[143109.0,18.0,16...| 4876.620706852496|
+| 2500|[112946.0,8.0,0.0...| 12346.96663329268|
+| 2500|[192922.0,17.0,14...| 4460.241135733948|
+| 2750|[73095.0,16.0,13....|13381.605651814956|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Isotonic Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : -0.00070
+Adjusted R² : -0.00070
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 104616186.5428
+RMSE    : 10228.21
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 8094.63
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...|14618.349339340859|
+| 2499|[143109.0,18.0,16...|14618.349339340859|
+| 2500|[112946.0,8.0,0.0...|14618.349339340859|
+| 2500|[192922.0,17.0,14...|14618.349339340859|
+| 2750|[73095.0,16.0,13....|14618.349339340859|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Factorization Machines Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : -0.85565
+Adjusted R² : -0.85565
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 193995209.8289
+RMSE    : 13928.22
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 10185.99
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...|10593.653935106307|
+| 2499|[143109.0,18.0,16...|10227.687352969217|
+| 2500|[112946.0,8.0,0.0...|12821.630282974671|
+| 2500|[192922.0,17.0,14...|15319.435181763336|
+| 2750|[73095.0,16.0,13....| 8638.992587995188|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Decision Tree -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.23299
+Adjusted R² : 0.23299
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 80185198.2699
+RMSE    : 8954.62
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 4672.30
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...| 5002.850043655413|
+| 2499|[143109.0,18.0,16...| 5002.850043655413|
+| 2500|[112946.0,8.0,0.0...|16656.067226890755|
+| 2500|[192922.0,17.0,14...| 5002.850043655413|
+| 2750|[73095.0,16.0,13....| 5002.850043655413|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Random Forest Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.53381
+Adjusted R² : 0.53381
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 48737255.7588
+RMSE    : 6981.21
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 5250.69
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...|  9271.78004145723|
+| 2499|[143109.0,18.0,16...|  9271.78004145723|
+| 2500|[112946.0,8.0,0.0...|13176.652315900288|
+| 2500|[192922.0,17.0,14...|  9271.78004145723|
+| 2750|[73095.0,16.0,13....| 12290.16391985798|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Gradient Boosting Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.02512
+Adjusted R² : 0.02512
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 101917001.5357
+RMSE    : 10095.40
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 4409.38
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...| 4060.265744827956|
+| 2499|[143109.0,18.0,16...| 3901.042996588362|
+| 2500|[112946.0,8.0,0.0...|13951.274408736348|
+| 2500|[192922.0,17.0,14...|3176.3780540051835|
+| 2750|[73095.0,16.0,13....| 3283.492610442063|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+    ------- Generalized Linear Regression -------
+
+    --- Coefficient of Determination (R² & Adjusted R²) ---
+R²      : 0.46383
+Adjusted R² : 0.46383
+
+    --- Mean Squared Error (MSE & RMSE) ---
+MSE : 56053177.8298
+RMSE    : 7486.87
+
+    --- Mean Absolute Error (MAE) ---
+MAE : 5624.39
+
+    --- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2100|[190000.0,20.0,19...| 563.1488158458487|
+| 2499|[143109.0,18.0,16...| 4876.618092430723|
+| 2500|[112946.0,8.0,0.0...|12346.770504380574|
+| 2500|[192922.0,17.0,14...| 4460.227356760803|
+| 2750|[73095.0,16.0,13....|13381.689962311344|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+------------------------------------------
+----------- Models Comparison ------------
+------------------------------------------
+
++--------------------+-----+-----------+------------+--------+--------+
+|           Algorithm|   R²|Adjusted R²|         MSE|    RMSE|     MAE|
++--------------------+-----+-----------+------------+--------+--------+
+|   Linear Regression| 0.46|       0.46| 56053213.75| 7486.87| 5624.39|
+|    Lasso Regression| 0.46|       0.46| 56053216.92| 7486.87| 5624.39|
+|    Ridge Regression| 0.46|       0.46| 56053181.06| 7486.87| 5624.39|
+| Isotonic Regression|  0.0|        0.0|104616186.54|10228.21| 8094.63|
+|Factorization Mac...|-0.86|      -0.86|193995209.83|13928.22|10185.99|
+|       Decision Tree| 0.23|       0.23| 80185198.27| 8954.62|  4672.3|
+|Random Forest Reg...| 0.53|       0.53| 48737255.76| 6981.21| 5250.69|
+|Gradient Boost Re...| 0.03|       0.03|101917001.54| 10095.4| 4409.38|
+|Generalized Linea...| 0.46|       0.46| 56053177.83| 7486.87| 5624.39|
++--------------------+-----+-----------+------------+--------+--------+
+
++--------------------+------------------+---------+
+|           Algorithm|    Execution Time|CPU usage|
++--------------------+------------------+---------+
+|   Linear Regression| 61.67365097999573|     18.8|
+|    Lasso Regression| 49.20862865447998|     10.1|
+|    Ridge Regression| 52.54667592048645|      8.8|
+| Isotonic Regression|45.458150148391724|      9.4|
+|Factorization Mac...| 71.37654137611389|     12.1|
+|       Decision Tree| 46.90582323074341|      9.0|
+|       Random Forest| 39.46098780632019|      9.3|
+|   Gradient Boosting| 97.56666231155396|      9.4|
+|Generalized Linea...| 43.92576837539673|      8.2|
++--------------------+------------------+---------+
+

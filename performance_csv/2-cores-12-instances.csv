@@ -1,0 +1,22 @@
+Cores & Instances,Query/Model,Dataset size,Execution Time,CPU Usage
+2 cores & 12 instances,Sample loading,100,21.721652030944824,29.7
+2 cores & 12 instances,Query 1,100,7.71326470375061,22.2
+2 cores & 12 instances,Query 2,100,6.5000879764556885,22.4
+2 cores & 12 instances,Query 3,100,10.454302787780762,24.2
+2 cores & 12 instances,Liner Regression,100,52.68912506103516,17.5
+2 cores & 12 instances,Decison Tree,100,37.64405632019043,13.4
+2 cores & 12 instances,Random Forest Regression,100,35.04068851470947,12.0
+2 cores & 12 instances,Sample loading,700,19.144184589385983,8.9
+2 cores & 12 instances,Query 1,700,4.694841623306274,10.1
+2 cores & 12 instances,Query 2,700,5.121672630310059,6.6
+2 cores & 12 instances,Query 3,700,8.910062313079834,8.2
+2 cores & 12 instances,Liner Regression,700,53.02566385269165,9.7
+2 cores & 12 instances,Decision Tree,700,39.64802026748657,11.7
+2 cores & 12 instances,Random Forest Regression,700,37.04258108139038,8.4
+2 cores & 12 instances,Sample loading,1300,42.47038245201111,11.9
+2 cores & 12 instances,Query 1,1300,4.817978382110596,7.6
+2 cores & 12 instances,Query 2,1300,5.253479719161987,9.2
+2 cores & 12 instances,Query 3,1300,8.782268285751343,9.4
+2 cores & 12 instances,Liner Regression,1300,53.57266902923584,8.9
+2 cores & 12 instances,Decision Tree,1300,42.47587132453919,9.7
+2 cores & 12 instances,Random Forest Regression,1300,37.35154962539673,8.1

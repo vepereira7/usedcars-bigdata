@@ -1,0 +1,317 @@
+-----------------------------------------
+---------- DATA VIZ & CLEANING ----------
+-----------------------------------------
+
+root
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- posting_date: string (nullable = true)
+
+
+Upon reviewing the previews and descriptions of the continuous variables, it becomes clear that some initial cleaning is necessary. This will be continued accordingly.
+
+
+Visualizing the data reveals patterns that are not obvious to the human eye when reviewing raw data.
+Correlation matrices, histograms, category, scatter & box plots have helped identify relationships.
+
+Cleaned data based on visualizations:
+
+	- Removed NaNs & duplicates
+	- Price b/w 2k and 50k
+	- Odometer b/w 100 and 200k, etc..
+
+In the section below, features that would help with better prediction are identified.
+
++-------+--------------------+------------------+------------------+-----------------+-----------------+
+|summary|               index|             price|              year|         odometer|     posting_date|
++-------+--------------------+------------------+------------------+-----------------+-----------------+
+|  count|              196588|            196583|            196584|           196582|             1862|
+|   mean|1.312686579243667...|45524.299196776934|2011.5842642331013|91305.84317994527|206.7006919104866|
+| stddev|  9.77519595952744E9| 8811507.009264493| 9.437163873416328|196233.2251572517|654.9319407673255|
+|    min|                 0.0|               0.0|            1900.0|              0.0|       -156.67361|
+|    max|        3.4359738E10|      3.73692877E9|            3500.0|            1.0E7|           2022.0|
++-------+--------------------+------------------+------------------+-----------------+-----------------+
+
+
+It appears that the price ranges between 0 and an unrealistic $3.7B
+To keep things simple and realistic, making a subset of prices between 2k and 50k
+
+Skewness for odometer: 48.22
+
+It's evident that the distribution is highly skewed and there's some bad data with max odometer readings of 10mil miles etc.
+
+Let's work on cleaning up some of that data.
+
+Doing some research, We found that Americans drive an average of 14,300 miles per year, according to the Federal Highway Administration.
+
+Let's look at the entries for odometer = 0 and odometer > 200k.
+
++-------+--------------------+-----------------+------------------+------------+------------------+---------+------+--------+------------+------------+-----+--------------------+
+|summary|               index|            price|              year|manufacturer|             model|condition|  fuel|odometer|title_status|transmission| type|        posting_date|
++-------+--------------------+-----------------+------------------+------------+------------------+---------+------+--------+------------+------------+-----+--------------------+
+|  count|                 245|              245|               245|         245|               245|      245|   245|     245|         245|         245|  245|                 245|
+|   mean|1.360367093170612...|13626.75918367347|2002.5020408163266|        null| 1707.142857142857|     null|  null|     0.0|        null|        null| null|  -88.88786983333334|
+| stddev|  9.48557430041019E9| 9455.81742068919| 20.89466644820956|        null|1388.1167572895774|     null|  null|     0.0|        null|        null| null|  63.953373427769606|
+|    min|                 156|            10000|              1927|        audi|              1500|excellent|diesel|       0|       clean|   automatic|  SUV| 2 in 2nd row and...|
+|    max|         34359740166|             9999|              2021|       volvo|          yukon xl|  salvage| other|       0|     salvage|       other|wagon|                  pa|
++-------+--------------------+-----------------+------------------+------------+------------------+---------+------+--------+------------+------------+-----+--------------------+
+
++-------+--------------------+-----------------+------------------+------------+------------------+---------+------+-----------------+------------+------------+-----+------------------+
+|summary|               index|            price|              year|manufacturer|             model|condition|  fuel|         odometer|title_status|transmission| type|      posting_date|
++-------+--------------------+-----------------+------------------+------------+------------------+---------+------+-----------------+------------+------------+-----+------------------+
+|  count|                9205|             9205|              9205|        9205|              9205|     9205|  9205|             9205|        9205|        9205| 9205|              9205|
+|   mean|1.311962152557132E10|7619.625964149918|2004.3544812601847|        null|2205.3305699481866|     null|  null|297155.2836501901|        null|        null| null| 82.41120344000001|
+| stddev| 9.708191729192001E9|5965.233938991167| 6.719388938453906|        null| 985.4839696776517|     null|  null|605727.4016116532|        null|        null| null|492.69609305284484|
+|    min|                  30|            10000|              1905|       acura|           """t"""|excellent|diesel|          1000000|       clean|   automatic|  SUV|              1985|
+|    max|         34359740364|             9999|              2022|       volvo|               zdx|  salvage| other|          9999999|     salvage|       other|wagon|                wi|
++-------+--------------------+-----------------+------------------+------------+------------------+---------+------+-----------------+------------+------------+-----+------------------+
+
+Based on the stats above, We can make a fair assumption that odometer readings be between 100 (CPO) to 200k (20 yo) will be a good dataset to continue with.
+
++-------+------------------+
+|summary|          odometer|
++-------+------------------+
+|  count|            170250|
+|   mean| 78582.59800293685|
+| stddev|54312.472547200785|
+|    min|              1000|
+|    max|             99999|
++-------+------------------+
+
+
+Skewness for Log of Odometer Readings::	: -1.59
+
+Skewness for Square Root of Odometer Readings::	: -0.18
+
+	
+ It appears that there is some inconsistency in the first 2/3rds of the dataset.
+
+
+Price seems to consistently rise 2000 onwards until about 2021; and there seems to be some bad data for 2022 as well.
+
+
+Filtering the dataset between 2000 and 2020 for further analysis. 
+
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+--------------------+
+|index|price|year|manufacturer|               model|condition| fuel|odometer|title_status|transmission|     type|        posting_date|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+--------------------+
+|    0|20590|2013|       acura|mdx sport utility 4d|     good|  gas|   77087|       clean|       other|    other|2021-04-19T10:50:...|
+|    1|17990|2013|      subaru|xv crosstrek premium|     good|  gas|   57371|       clean|       other|hatchback|2021-04-29T22:11:...|
+|    2|24990|2007|        ford|super duty f-450 drw|     good|  gas|   46463|       clean|   automatic|    truck| ashtray & cigar ...|
+|    3|41000|2019|        mini|        t camper van|excellent|  gas|   29288|       clean|   automatic|      van| 10 speed thermos...|
+|    4|28990|2008|        ford|super duty f-450 drw|     good|  gas|  118078|       clean|   automatic|    truck|2021-04-14T16:13:...|
+|    5| 4200|2007|       honda|             odyssey|     good|  gas|  195000|       clean|   automatic| mini-van|2021-04-11T12:22:...|
+|    6|20000|2014|        jeep|      grand cherokee| like new|  gas|  167821|       clean|   automatic|      SUV|2021-04-10T13:32:...|
+|    7|41990|2019|      toyota|     4runner limited|     good|  gas|   32326|       clean|       other|      SUV|2021-04-10T12:11:...|
+|    8|11999|2013|        audi|a4 2.0t premium plus| like new|  gas|   96000|       clean|   automatic|    sedan|2021-04-08T02:12:...|
+|    9|31590|2019|    cadillac|    xt4 sport suv 4d|     good|other|   12102|       clean|       other|hatchback|2021-04-28T08:31:...|
+|   10|41590|2020|       buick|enclave avenir sport|     good|  gas|   29010|       clean|       other|      SUV|2021-04-08T09:21:...|
+|   11|36590|2019|         gmc|sierra 1500 limit...|     good|  gas|   14222|       clean|       other|   pickup|2021-04-18T10:31:...|
+|   12|16600|2014|       acura|      rdx technology|     good|  gas|  100784|       clean|   automatic|      SUV|2021-05-03T09:54:...|
+|   13|33590|2014|         gmc|sierra 1500 crew ...|     good|  gas|   57923|       clean|       other|   pickup|2021-05-01T16:21:...|
+|   14|27590|2018|     lincoln|   mkx reserve sport|     good|  gas|   48039|       clean|       other|    other|2021-04-19T12:00:...|
+|   15|27590|2013|      toyota|tacoma access cab...|     good|other|   43937|       clean|       other|   pickup|2021-04-17T11:30:...|
+|   16|25590|2017|      jaguar|xf 20d premium se...|     good|other|   27662|       clean|   automatic|    sedan|2021-04-11T13:11:...|
+|   17| 9995|2010|       honda|             odyssey|excellent|  gas|  160964|       clean|   automatic| mini-van|2021-04-29T13:45:...|
+|   19| 8950|2009|       lexus|      is 250 awd nav|     good|  gas|  134730|       clean|   automatic|    sedan|2021-04-27T13:17:...|
+|   20| 6700|2014|    chrysler|                 200|     good|  gas|  110000|        lien|   automatic|    sedan|2021-04-10T15:44:...|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+--------------------+
+only showing top 20 rows
+
+
+With this used 20 year set, next, trying to find how the three features come together and depict real-worl characteristics. Checking how price varies with mean odometer ratings over the age of the car posted.
+
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+|index|price|year|manufacturer|               model|condition| fuel|odometer|title_status|transmission|     type|posting_date| age|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+|    0|20590|2013|       acura|mdx sport utility 4d|     good|  gas|   77087|       clean|       other|    other|  2021-04-19| 8.0|
+|    1|17990|2013|      subaru|xv crosstrek premium|     good|  gas|   57371|       clean|       other|hatchback|  2021-04-29| 8.0|
+|    2|24990|2007|        ford|super duty f-450 drw|     good|  gas|   46463|       clean|   automatic|    truck|        null|null|
+|    3|41000|2019|        mini|        t camper van|excellent|  gas|   29288|       clean|   automatic|      van|        null|null|
+|    4|28990|2008|        ford|super duty f-450 drw|     good|  gas|  118078|       clean|   automatic|    truck|  2021-04-14|13.0|
+|    5| 4200|2007|       honda|             odyssey|     good|  gas|  195000|       clean|   automatic| mini-van|  2021-04-11|14.0|
+|    6|20000|2014|        jeep|      grand cherokee| like new|  gas|  167821|       clean|   automatic|      SUV|  2021-04-10| 7.0|
+|    7|41990|2019|      toyota|     4runner limited|     good|  gas|   32326|       clean|       other|      SUV|  2021-04-10| 2.0|
+|    8|11999|2013|        audi|a4 2.0t premium plus| like new|  gas|   96000|       clean|   automatic|    sedan|  2021-04-08| 8.0|
+|    9|31590|2019|    cadillac|    xt4 sport suv 4d|     good|other|   12102|       clean|       other|hatchback|  2021-04-28| 2.0|
+|   10|41590|2020|       buick|enclave avenir sport|     good|  gas|   29010|       clean|       other|      SUV|  2021-04-08| 1.0|
+|   11|36590|2019|         gmc|sierra 1500 limit...|     good|  gas|   14222|       clean|       other|   pickup|  2021-04-18| 2.0|
+|   12|16600|2014|       acura|      rdx technology|     good|  gas|  100784|       clean|   automatic|      SUV|  2021-05-03| 7.0|
+|   13|33590|2014|         gmc|sierra 1500 crew ...|     good|  gas|   57923|       clean|       other|   pickup|  2021-05-01| 7.0|
+|   14|27590|2018|     lincoln|   mkx reserve sport|     good|  gas|   48039|       clean|       other|    other|  2021-04-19| 3.0|
+|   15|27590|2013|      toyota|tacoma access cab...|     good|other|   43937|       clean|       other|   pickup|  2021-04-17| 8.0|
+|   16|25590|2017|      jaguar|xf 20d premium se...|     good|other|   27662|       clean|   automatic|    sedan|  2021-04-11| 4.0|
+|   17| 9995|2010|       honda|             odyssey|excellent|  gas|  160964|       clean|   automatic| mini-van|  2021-04-29|11.0|
+|   19| 8950|2009|       lexus|      is 250 awd nav|     good|  gas|  134730|       clean|   automatic|    sedan|  2021-04-27|12.0|
+|   20| 6700|2014|    chrysler|                 200|     good|  gas|  110000|        lien|   automatic|    sedan|  2021-04-10| 7.0|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+only showing top 20 rows
+
+
+	
+ It's evident that cars that have been driven less are more expensive than older cars which have been driven more. 
+	There seem to be a good chunk of cars under 10k that have been driven 120k and over and are 12 years and older - this is an interesting insight.
+
+
+	Since we want to look at only used cars, ignoring new cars for the moment.
+
+
+It also looks like there are only parts being sold - which might affect the price.
+
+
+Removing both these attributes..
+
+On to the next, understanding how price of cars is affected by the fuel and trasmission features...
+
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+|index|price|year|manufacturer|               model|condition| fuel|odometer|title_status|transmission|     type|posting_date| age|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+|    0|20590|2013|       acura|mdx sport utility 4d|     good|  gas|   77087|       clean|       other|    other|  2021-04-19| 8.0|
+|    1|17990|2013|      subaru|xv crosstrek premium|     good|  gas|   57371|       clean|       other|hatchback|  2021-04-29| 8.0|
+|    2|24990|2007|        ford|super duty f-450 drw|     good|  gas|   46463|       clean|   automatic|    truck|        null|null|
+|    3|41000|2019|        mini|        t camper van|excellent|  gas|   29288|       clean|   automatic|      van|        null|null|
+|    4|28990|2008|        ford|super duty f-450 drw|     good|  gas|  118078|       clean|   automatic|    truck|  2021-04-14|13.0|
+|    5| 4200|2007|       honda|             odyssey|     good|  gas|  195000|       clean|   automatic| mini-van|  2021-04-11|14.0|
+|    6|20000|2014|        jeep|      grand cherokee| like new|  gas|  167821|       clean|   automatic|      SUV|  2021-04-10| 7.0|
+|    7|41990|2019|      toyota|     4runner limited|     good|  gas|   32326|       clean|       other|      SUV|  2021-04-10| 2.0|
+|    8|11999|2013|        audi|a4 2.0t premium plus| like new|  gas|   96000|       clean|   automatic|    sedan|  2021-04-08| 8.0|
+|    9|31590|2019|    cadillac|    xt4 sport suv 4d|     good|other|   12102|       clean|       other|hatchback|  2021-04-28| 2.0|
+|   10|41590|2020|       buick|enclave avenir sport|     good|  gas|   29010|       clean|       other|      SUV|  2021-04-08| 1.0|
+|   11|36590|2019|         gmc|sierra 1500 limit...|     good|  gas|   14222|       clean|       other|   pickup|  2021-04-18| 2.0|
+|   12|16600|2014|       acura|      rdx technology|     good|  gas|  100784|       clean|   automatic|      SUV|  2021-05-03| 7.0|
+|   13|33590|2014|         gmc|sierra 1500 crew ...|     good|  gas|   57923|       clean|       other|   pickup|  2021-05-01| 7.0|
+|   14|27590|2018|     lincoln|   mkx reserve sport|     good|  gas|   48039|       clean|       other|    other|  2021-04-19| 3.0|
+|   15|27590|2013|      toyota|tacoma access cab...|     good|other|   43937|       clean|       other|   pickup|  2021-04-17| 8.0|
+|   16|25590|2017|      jaguar|xf 20d premium se...|     good|other|   27662|       clean|   automatic|    sedan|  2021-04-11| 4.0|
+|   17| 9995|2010|       honda|             odyssey|excellent|  gas|  160964|       clean|   automatic| mini-van|  2021-04-29|11.0|
+|   19| 8950|2009|       lexus|      is 250 awd nav|     good|  gas|  134730|       clean|   automatic|    sedan|  2021-04-27|12.0|
+|   20| 6700|2014|    chrysler|                 200|     good|  gas|  110000|        lien|   automatic|    sedan|  2021-04-10| 7.0|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+only showing top 20 rows
+
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+|index|price|year|manufacturer|               model|condition| fuel|odometer|title_status|transmission|     type|posting_date| age|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+|    0|20590|2013|       acura|mdx sport utility 4d|     good|  gas|   77087|       clean|       other|    other|  2021-04-19| 8.0|
+|    1|17990|2013|      subaru|xv crosstrek premium|     good|  gas|   57371|       clean|       other|hatchback|  2021-04-29| 8.0|
+|    2|24990|2007|        ford|super duty f-450 drw|     good|  gas|   46463|       clean|   automatic|    truck|        null|null|
+|    3|41000|2019|        mini|        t camper van|excellent|  gas|   29288|       clean|   automatic|      van|        null|null|
+|    4|28990|2008|        ford|super duty f-450 drw|     good|  gas|  118078|       clean|   automatic|    truck|  2021-04-14|13.0|
+|    5| 4200|2007|       honda|             odyssey|     good|  gas|  195000|       clean|   automatic| mini-van|  2021-04-11|14.0|
+|    6|20000|2014|        jeep|      grand cherokee| like new|  gas|  167821|       clean|   automatic|      SUV|  2021-04-10| 7.0|
+|    7|41990|2019|      toyota|     4runner limited|     good|  gas|   32326|       clean|       other|      SUV|  2021-04-10| 2.0|
+|    8|11999|2013|        audi|a4 2.0t premium plus| like new|  gas|   96000|       clean|   automatic|    sedan|  2021-04-08| 8.0|
+|    9|31590|2019|    cadillac|    xt4 sport suv 4d|     good|other|   12102|       clean|       other|hatchback|  2021-04-28| 2.0|
+|   10|41590|2020|       buick|enclave avenir sport|     good|  gas|   29010|       clean|       other|      SUV|  2021-04-08| 1.0|
+|   11|36590|2019|         gmc|sierra 1500 limit...|     good|  gas|   14222|       clean|       other|   pickup|  2021-04-18| 2.0|
+|   12|16600|2014|       acura|      rdx technology|     good|  gas|  100784|       clean|   automatic|      SUV|  2021-05-03| 7.0|
+|   13|33590|2014|         gmc|sierra 1500 crew ...|     good|  gas|   57923|       clean|       other|   pickup|  2021-05-01| 7.0|
+|   14|27590|2018|     lincoln|   mkx reserve sport|     good|  gas|   48039|       clean|       other|    other|  2021-04-19| 3.0|
+|   15|27590|2013|      toyota|tacoma access cab...|     good|other|   43937|       clean|       other|   pickup|  2021-04-17| 8.0|
+|   16|25590|2017|      jaguar|xf 20d premium se...|     good|other|   27662|       clean|   automatic|    sedan|  2021-04-11| 4.0|
+|   17| 9995|2010|       honda|             odyssey|excellent|  gas|  160964|       clean|   automatic| mini-van|  2021-04-29|11.0|
+|   19| 8950|2009|       lexus|      is 250 awd nav|     good|  gas|  134730|       clean|   automatic|    sedan|  2021-04-27|12.0|
+|   20| 6700|2014|    chrysler|                 200|     good|  gas|  110000|        lien|   automatic|    sedan|  2021-04-10| 7.0|
++-----+-----+----+------------+--------------------+---------+-----+--------+------------+------------+---------+------------+----+
+only showing top 20 rows
+
+
+	It's noted that "other" values for type of fuels and trasmissions contribute to a considerable volume of data.
+
+
+These, which are not a lot of value might affect the overall accuracy - hence removing them..
+
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+------------+----+
+|index|price|year|manufacturer|               model|condition|  fuel|odometer|title_status|transmission|    type|posting_date| age|
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+------------+----+
+|    2|24990|2007|        ford|super duty f-450 drw|     good|   gas|   46463|       clean|   automatic|   truck|        null|null|
+|    3|41000|2019|        mini|        t camper van|excellent|   gas|   29288|       clean|   automatic|     van|        null|null|
+|    4|28990|2008|        ford|super duty f-450 drw|     good|   gas|  118078|       clean|   automatic|   truck|  2021-04-14|13.0|
+|    5| 4200|2007|       honda|             odyssey|     good|   gas|  195000|       clean|   automatic|mini-van|  2021-04-11|14.0|
+|    6|20000|2014|        jeep|      grand cherokee| like new|   gas|  167821|       clean|   automatic|     SUV|  2021-04-10| 7.0|
+|    8|11999|2013|        audi|a4 2.0t premium plus| like new|   gas|   96000|       clean|   automatic|   sedan|  2021-04-08| 8.0|
+|   12|16600|2014|       acura|      rdx technology|     good|   gas|  100784|       clean|   automatic|     SUV|  2021-05-03| 7.0|
+|   17| 9995|2010|       honda|             odyssey|excellent|   gas|  160964|       clean|   automatic|mini-van|  2021-04-29|11.0|
+|   19| 8950|2009|       lexus|      is 250 awd nav|     good|   gas|  134730|       clean|   automatic|   sedan|  2021-04-27|12.0|
+|   20| 6700|2014|    chrysler|                 200|     good|   gas|  110000|        lien|   automatic|   sedan|  2021-04-10| 7.0|
+|   24|34999|2014|      toyota|          tundra sr5|excellent|   gas|   47615|       clean|   automatic|   truck|  2021-05-01| 7.0|
+|   25|29999|2016|        ford|         transit xlt|excellent|   gas|   40717|       clean|   automatic|mini-van|  2021-04-30| 5.0|
+|   26|13900|2013|      toyota|             rav4 le|excellent|   gas|   92965|        lien|   automatic|     SUV|  2021-04-17| 8.0|
+|   27|15999|2015|   chevrolet|          equinox ls|     good|   gas|   54484|       clean|   automatic|     SUV|  2021-04-15| 6.0|
+|   28|29999|2015|         ram|            1500 slt|     good|   gas|   66366|       clean|   automatic|   truck|  2021-04-14| 6.0|
+|   29|10730|2011|   chevrolet|      silverado 1500|     fair|   gas|  131700|     rebuilt|   automatic|   truck|  2021-04-29|10.0|
+|   30|15500|2013|       honda|              accord| like new|   gas|   60000|       clean|   automatic|   sedan|  2021-04-29| 8.0|
+|   35|39000|2017|        ford|         transit 350|excellent|   gas|   58000|        lien|   automatic|     van|        null|null|
+|   36|21500|2006|        ford|     f450 super duty|     good|diesel|   93182|       clean|   automatic|   truck|  2021-05-02|15.0|
+|   37|29990|2017|      nissan|titan crew cab sv...|     good|   gas|   35045|       clean|   automatic|  pickup|  2021-05-02| 4.0|
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+------------+----+
+only showing top 20 rows
+
+Next, we see how price is related to different kinds of manufacturers and the models they produce.
+
++---------------+------------------+
+|   manufacturer|         avg_price|
++---------------+------------------+
+|          acura|14185.706231454005|
+|     alfa-romeo| 28785.51851851852|
+|   aston-martin|41831.666666666664|
+|           audi| 19174.28101644245|
+|            bmw|18221.017119623368|
+|          buick| 10529.44056463596|
+|       cadillac| 14720.09817197021|
+|      chevrolet|15860.345311536088|
+|       chrysler| 8676.230571281523|
+|          dodge|12284.616044090631|
+|           fiat|  8901.08040201005|
+|           ford|16622.150733789393|
+|            gmc| 19560.80600247525|
+|harley-davidson|16028.892857142857|
+|          honda|10359.512370077588|
+|        hyundai|10224.458709878467|
+|       infiniti|18279.659927797835|
+|         jaguar| 17740.26168224299|
+|           jeep|16953.113494809688|
+|            kia| 10484.66453810132|
++---------------+------------------+
+only showing top 20 rows
+
+
+	It's obviously evident that luxury brands have a higer price, but except a couple outliers, the median price lies near most points
+
+
+Finally, we explore the "model" feature which I imagine has the highest cardinality amongst all the features we've seen so far..
+
++--------------------+-----------+
+|               model|count_model|
++--------------------+-----------+
+|          charger se|         30|
+|      avalon limited|         47|
+|         2500 diesel|         13|
+|           sentra sv|         83|
+|             4runner|        268|
+|            lacrosse|        148|
+|                 xk8|         12|
+|          caravan se|         13|
+|       sonata hybrid|         38|
+|                 hse|         42|
+|                hr-v|         28|
+|        slt crew cab|          3|
+|                 dts|        133|
+|   eclipse cross sel|          3|
+|           cts sedan|         19|
+|explorer limited 4wd|         10|
+|  cherokee trailhawk|         14|
+|                 q40|          6|
+|         tiguan 2009|          1|
+|           pruis two|          1|
++--------------------+-----------+
+only showing top 20 rows
+

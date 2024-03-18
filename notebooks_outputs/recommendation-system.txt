@@ -1,0 +1,216 @@
+-----------------------------------------
+--------- Recomendation System ----------
+-----------------------------------------
+
++----------+--------------------+------+--------------------+-----+----+------------+--------------------+---------+-----------+-----+--------+------------+------------+-----------------+-----+---------+------+-----------+--------------------+--------------------+------+-----+-------+----------+--------------------+
+|        id|                 url|region|          region_url|price|year|manufacturer|               model|condition|  cylinders| fuel|odometer|title_status|transmission|              VIN|drive|     size|  type|paint_color|           image_url|         description|county|state|    lat|      long|        posting_date|
++----------+--------------------+------+--------------------+-----+----+------------+--------------------+---------+-----------+-----+--------+------------+------------+-----------------+-----+---------+------+-----------+--------------------+--------------------+------+-----+-------+----------+--------------------+
+|7316814884|https://auburn.cr...|auburn|https://auburn.cr...|33590|2014|         gmc|sierra 1500 crew ...|     good|8 cylinders|  gas|   57923|       clean|       other|3GTP1VEC4EG551563| null|     null|pickup|      white|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-04T12:31:...|
+|7316814758|https://auburn.cr...|auburn|https://auburn.cr...|22590|2010|   chevrolet|      silverado 1500|     good|8 cylinders|  gas|   71229|       clean|       other|1GCSCSE06AZ123805| null|     null|pickup|       blue|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-04T12:31:...|
+|7316814989|https://auburn.cr...|auburn|https://auburn.cr...|39590|2020|   chevrolet| silverado 1500 crew|     good|8 cylinders|  gas|   19160|       clean|       other|3GCPWCED5LG130317| null|     null|pickup|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-04T12:31:...|
+|7316743432|https://auburn.cr...|auburn|https://auburn.cr...|30990|2017|      toyota|tundra double cab sr|     good|8 cylinders|  gas|   41124|       clean|       other|5TFRM5F17HX120972| null|     null|pickup|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-04T10:41:...|
+|7316356412|https://auburn.cr...|auburn|https://auburn.cr...|15000|2013|        ford|           f-150 xlt|excellent|6 cylinders|  gas|  128000|       clean|   automatic|             null|  rwd|full-size| truck|      black|https://images.cr...|2013 F-150 XLT V6...|  null|   al| 32.592|  -85.5189|2021-05-03T14:02:...|
+|7316343444|https://auburn.cr...|auburn|https://auburn.cr...|27990|2012|         gmc|sierra 2500 hd ex...|     good|8 cylinders|  gas|   68696|       clean|       other|1GT220CG8CZ231238|  4wd|     null|pickup|      black|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-03T13:41:...|
+|7316304717|https://auburn.cr...|auburn|https://auburn.cr...|34590|2016|   chevrolet|silverado 1500 do...|     good|6 cylinders|  gas|   29499|       clean|       other|1GCVKREH6GZ228691|  4wd|     null|pickup|     silver|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-03T12:41:...|
+|7316285779|https://auburn.cr...|auburn|https://auburn.cr...|35000|2019|      toyota|              tacoma|excellent|6 cylinders|  gas|   43000|       clean|   automatic|             null|  4wd|     null| truck|       grey|https://images.cr...|Selling my 2019 T...|  null|   al|32.6013|-85.443974|2021-05-03T12:12:...|
+|7316257769|https://auburn.cr...|auburn|https://auburn.cr...|29990|2016|   chevrolet|colorado extended...|     good|6 cylinders|  gas|   17302|       clean|       other|1GCHTCE37G1186784|  4wd|     null|pickup|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-03T11:31:...|
+|7316133914|https://auburn.cr...|auburn|https://auburn.cr...|38590|2011|   chevrolet|corvette grand sport|     good|8 cylinders|  gas|   30237|       clean|       other|1G1YR3DW3B5102190|  rwd|     null| other|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-03T07:50:...|
+|7315816316|https://auburn.cr...|auburn|https://auburn.cr...|32990|2017|        jeep|wrangler unlimite...|     good|6 cylinders|  gas|   30041|       clean|       other|1C4BJWDG5HL705371|  4wd|     null| other|     silver|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-02T12:22:...|
+|7315770394|https://auburn.cr...|auburn|https://auburn.cr...|24590|2017|   chevrolet|silverado 1500 re...|     good|6 cylinders|  gas|   40784|       clean|       other|1GCNCNEH7HZ118773| null|     null|pickup|      white|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-02T10:51:...|
+|7315756348|https://auburn.cr...|auburn|https://auburn.cr...|30990|2016|   chevrolet|colorado crew cab...|     good|       null|other|   34940|       clean|       other|1GCGTDE32G1341288|  4wd|     null|pickup|       blue|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-02T10:21:...|
+|7315715960|https://auburn.cr...|auburn|https://auburn.cr...|27990|2014|      toyota|tacoma access cab...|     good|       null|other|   17805|       clean|       other|5TFTX4CN3EX042751| null|     null|pickup|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-02T08:44:...|
+|7315379459|https://auburn.cr...|auburn|https://auburn.cr...|37990|2016|   chevrolet|  camaro ss coupe 2d|     good|8 cylinders|  gas|    9704|       clean|       other|1G1FF1R79G0140582|  rwd|     null| coupe|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-01T12:21:...|
+|7315275975|https://auburn.cr...|auburn|https://auburn.cr...|33590|2014|      toyota|tundra crewmax sr...|     good|       null|other|   55251|       clean|       other|5TFEY5F15EX169621| null|     null|pickup|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-01T09:21:...|
+|7315275942|https://auburn.cr...|auburn|https://auburn.cr...|30990|2019|        ford|ranger supercrew ...|     good|       null|other|    1834|       clean|       other|1FTER4EH3KLA31326| null|     null|pickup|      black|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-01T09:21:...|
+|7315270785|https://auburn.cr...|auburn|https://auburn.cr...|27990|2018|      nissan|frontier crew cab...|     good|6 cylinders|  gas|   37332|       clean|       other|1N6AD0EV5JN745213|  4wd|     null|pickup|     silver|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-05-01T09:11:...|
+|7314910156|https://auburn.cr...|auburn|https://auburn.cr...|34590|2018|        ford|f150 super cab xl...|     good|6 cylinders|  gas|   20856|       clean|       other|1FTEX1CBXJKD41626| null|     null|pickup|      white|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-04-30T12:51:...|
+|7314854462|https://auburn.cr...|auburn|https://auburn.cr...|30590|2016|      toyota|tacoma double cab...|     good|       null|other|   30176|       clean|       other|3TMAZ5CN7GM019182| null|     null|pickup|        red|https://images.cr...|Carvana is the sa...|  null|   al|  32.59|    -85.48|2021-04-30T11:21:...|
++----------+--------------------+------+--------------------+-----+----+------------+--------------------+---------+-----------+-----+--------+------------+------------+-----------------+-----+---------+------+-----------+--------------------+--------------------+------+-----+-------+----------+--------------------+
+only showing top 20 rows
+
+
+Create manufacturer countries, this means, the 'Made' column
+
++--------+------------+
+|    Made|manufacturer|
++--------+------------+
+|American|         gmc|
+|American|   chevrolet|
+|American|   chevrolet|
+|Japanese|      toyota|
+|American|        ford|
+|American|         gmc|
+|American|   chevrolet|
+|Japanese|      toyota|
+|American|   chevrolet|
+|American|   chevrolet|
+|American|        jeep|
+|American|   chevrolet|
+|American|   chevrolet|
+|Japanese|      toyota|
+|American|   chevrolet|
+|Japanese|      toyota|
+|American|        ford|
+|Japanese|      nissan|
+|American|        ford|
+|Japanese|      toyota|
++--------+------------+
+only showing top 20 rows
+
+
+Create cars age, this means, the 'age' column
+
+
+Create cars mil rating, this means, the 'mil_rating' column
+
+
+Create cars luxury division, this means, the 'type_group' column
+
++----------------+------+
+|      type_group|  type|
++----------------+------+
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small| truck|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small| truck|
+|non-luxury_small|pickup|
+|    luxury_small| other|
+|    luxury_small| other|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|    luxury_small| coupe|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
+|non-luxury_small|pickup|
++----------------+------+
+only showing top 20 rows
+
+
+Create cars colours division, this means, the 'color_group' column
+
++-----------+-----------+
+|paint_color|color_group|
++-----------+-----------+
+|      white|light color|
+|       blue| dark color|
+|        red| dark color|
+|        red| dark color|
+|      black| dark color|
+|      black| dark color|
+|     silver|light color|
+|       grey| dark color|
+|        red| dark color|
+|        red| dark color|
+|     silver|light color|
+|      white|light color|
+|       blue| dark color|
+|        red| dark color|
+|        red| dark color|
+|        red| dark color|
+|      black| dark color|
+|     silver|light color|
+|      white|light color|
+|        red| dark color|
++-----------+-----------+
+only showing top 20 rows
+
+
+Prepare dataset to be used in the recognition system
+
+root
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- paint_color: string (nullable = true)
+ |-- posting_date: string (nullable = true)
+ |-- Made: string (nullable = true)
+ |-- age: double (nullable = true)
+ |-- avg_mil: double (nullable = true)
+ |-- mil_rating: string (nullable = false)
+ |-- type_group: string (nullable = true)
+ |-- color_group: string (nullable = false)
+
+
+
+-----------------------------------------------
+-------------- Recommendations ----------------
+-----------------------------------------------
+
+
+Recommendation 1
+
++-----+--------+------------+-----------+-----+----+----+---------+----+------------+------------+-----------+-------------+
+|price|    Made|manufacturer|      model| type|year| Age|condition|fuel|title_status|transmission|paint_color|   mil_rating|
++-----+--------+------------+-----------+-----+----+----+---------+----+------------+------------+-----------+-------------+
+| 5500|Japanese|       honda|     accord|coupe|2012| 9.0| like new| gas|       clean|   automatic|     silver|below average|
+| 5500|Japanese|       honda|accord ex-l|sedan|2004|17.0|excellent| gas|       clean|   automatic|     silver|below average|
+| 5500|Japanese|       honda|   civic ex|sedan|2004|17.0|excellent| gas|       clean|   automatic|     silver|below average|
+| 5500|Japanese|    infiniti|   m35x awd|sedan|2006|15.0|excellent| gas|       clean|   automatic|     custom|below average|
+| 5500|Japanese|       mazda|     mazda3|sedan|2008|13.0|excellent| gas|       clean|   automatic|     custom|below average|
++-----+--------+------------+-----------+-----+----+----+---------+----+------------+------------+-----------+-------------+
+
+
+Recommendation 2
+
++-----+--------+------------+--------------+----+----+----+---------+----+------------+------------+-----------+-------------+
+|price|    Made|manufacturer|         model|type|year| Age|condition|fuel|title_status|transmission|paint_color|   mil_rating|
++-----+--------+------------+--------------+----+----+----+---------+----+------------+------------+-----------+-------------+
+|10999|American|   chevrolet|    equinox lt| SUV|2016| 5.0|excellent| gas|     salvage|   automatic|      black|below average|
+|10999|American|   chevrolet|equinox lt awd| SUV|2014| 7.0|excellent| gas|       clean|   automatic|      black|below average|
+|10999|American|         gmc|  yukon denali| SUV|2012| 9.0|excellent| gas|       clean|   automatic|      black|below average|
+|11999|American|    cadillac|           srx| SUV|2012| 9.0|excellent| gas|       clean|   automatic|      black|below average|
+|11999|American|        ford|    expedition| SUV|2008|13.0|     good| gas|       clean|   automatic|      brown|below average|
++-----+--------+------------+--------------+----+----+----+---------+----+------------+------------+-----------+-------------+
+
+
+Recommendation 3
+
++-----+------+-------------+--------------+---------+----+----+---------+----+------------+------------+-----------+-------------+
+|price|  Made| manufacturer|         model|     type|year| Age|condition|fuel|title_status|transmission|paint_color|   mil_rating|
++-----+------+-------------+--------------+---------+----+----+---------+----+------------+------------+-----------+-------------+
+| 2000|German|mercedes-benz|     benz c240|    sedan|2002|19.0|     good| gas|       clean|   automatic|     silver|below average|
+| 4300|German|         audi|a4 3.0 quattro|    coupe|2005|16.0|excellent| gas|       clean|   automatic|     silver|below average|
+| 6000|German|mercedes-benz|     benz e350|    sedan|2007|14.0| like new| gas|       clean|   automatic|     silver|below average|
+| 6000|German|   volkswagen|        beetle|hatchback|1972|49.0| like new| gas|       clean|      manual|     yellow|below average|
+| 2000|German|   volkswagen|         jetta|    sedan|2008|13.0|     fair| gas|       clean|   automatic|      white|below average|
++-----+------+-------------+--------------+---------+----+----+---------+----+------------+------------+-----------+-------------+
+
+
+Recommendation 4
+
++-----+-------+------------+--------------------+---------+----+---+---------+-----+------------+------------+-----------+-------------+
+|price|   Made|manufacturer|               model|     type|year|Age|condition| fuel|title_status|transmission|paint_color|   mil_rating|
++-----+-------+------------+--------------------+---------+----+---+---------+-----+------------+------------+-----------+-------------+
+|17990|Italian|        fiat|500 pop hatchback 2d|hatchback|2019|2.0|     good|  gas|       clean|       other|      white|below average|
+|27590|Italian|  alfa-romeo|romeo giulia seda...|    sedan|2018|3.0|     good|  gas|       clean|       other|      white|below average|
+|27990|Italian|  alfa-romeo|romeo stelvio ti ...|hatchback|2018|3.0|     good|other|       clean|       other|      white|below average|
+|27990|Italian|  alfa-romeo|romeo stelvio ti ...|hatchback|2018|3.0|     good|other|       clean|       other|      white|below average|
+|27590|Italian|  alfa-romeo|romeo giulia seda...|    sedan|2018|3.0|     good|  gas|       clean|       other|      white|below average|
++-----+-------+------------+--------------------+---------+----+---+---------+-----+------------+------------+-----------+-------------+
+
+
+Recommendation 5
+
++-----+------+------------+-------------------+-----+----+---+---------+-----+------------+------------+-----------+-------------+
+|price|  Made|manufacturer|              model| type|year|Age|condition| fuel|title_status|transmission|paint_color|   mil_rating|
++-----+------+------------+-------------------+-----+----+---+---------+-----+------------+------------+-----------+-------------+
+|17590|Korean|     hyundai|sonata sel sedan 4d|sedan|2018|3.0|     good|other|       clean|       other|     silver|below average|
+|17590|Korean|         kia| forte lxs sedan 4d|sedan|2020|1.0|     good|other|       clean|       other|     silver|below average|
+|18590|Korean|     hyundai| sonata se sedan 4d|sedan|2018|3.0|     good|  gas|       clean|       other|      white|below average|
+|18590|Korean|     hyundai| sonata se sedan 4d|sedan|2018|3.0|     good|  gas|       clean|       other|      white|below average|
+|18590|Korean|     hyundai|sonata sel sedan 4d|sedan|2018|3.0|     good|  gas|       clean|       other|      white|below average|
++-----+------+------------+-------------------+-----+----+---+---------+-----+------------+------------+-----------+-------------+

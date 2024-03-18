@@ -1,0 +1,1282 @@
+-----------------------------------------------
+----------- 2 cores & 18 instances ------------
+-----------------------------------------------
+
+
+
+
+-----------------------------------------------
+----------- Sample size: 100 MB ---------------
+-----------------------------------------------
+
+--------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+|        id|                 url|              region|          region_url|price|year|manufacturer|model|condition|cylinders|fuel|odometer|title_status|transmission| VIN|drive|size|type|paint_color|image_url|description|county|state| lat|long|posting_date|
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+|7222695916|https://prescott....|            prescott|https://prescott....| 6000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   az|null|null|        null|
+|7218891961|https://fayar.cra...|        fayetteville|https://fayar.cra...|11900|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ar|null|null|        null|
+|7221797935|https://keys.crai...|        florida keys|https://keys.crai...|21000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   fl|null|null|        null|
+|7222270760|https://worcester...|worcester / centr...|https://worcester...| 1500|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ma|null|null|        null|
+|7210384030|https://greensbor...|          greensboro|https://greensbor...| 4900|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   nc|null|null|        null|
+|7222379453|https://hudsonval...|       hudson valley|https://hudsonval...| 1600|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7221952215|https://hudsonval...|       hudson valley|https://hudsonval...| 1000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7220195662|https://hudsonval...|       hudson valley|https://hudsonval...|15995|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7209064557|https://medford.c...|     medford-ashland|https://medford.c...| 5000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   or|null|null|        null|
+|7219485069|https://erie.crai...|                erie|https://erie.crai...| 3000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   pa|null|null|        null|
+|7218893038|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7218325704|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7217788283|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7217147606|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7209027818|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7223509794|https://bellingha...|          bellingham|https://bellingha...|13995|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7222753076|https://bellingha...|          bellingham|https://bellingha...|24999|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7222206015|https://bellingha...|          bellingham|https://bellingha...|21850|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7220030122|https://bellingha...|          bellingham|https://bellingha...|26850|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7218423006|https://bellingha...|          bellingham|https://bellingha...|11999|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+only showing top 20 rows
+
++----------+--------------------+-------------+--------------------+-----+----+------------+--------------------+---------+-----------+-----+--------+------------+------------+-----------------+-----+----+------+-----------+--------------------+--------------------+------+-----+-----+------+--------------------+
+|        id|                 url|       region|          region_url|price|year|manufacturer|               model|condition|  cylinders| fuel|odometer|title_status|transmission|              VIN|drive|size|  type|paint_color|           image_url|         description|county|state|  lat|  long|        posting_date|
++----------+--------------------+-------------+--------------------+-----+----+------------+--------------------+---------+-----------+-----+--------+------------+------------+-----------------+-----+----+------+-----------+--------------------+--------------------+------+-----+-----+------+--------------------+
+|7220195662|https://hudsonval...|hudson valley|https://hudsonval...|15995|null|        null|                null|     null|       null| null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   ny| null|  null|                null|
+|7222753076|https://bellingha...|   bellingham|https://bellingha...|24999|null|        null|                null|     null|       null| null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   wa| null|  null|                null|
+|7313857701|https://auburn.cr...|       auburn|https://auburn.cr...|25590|2015|         gmc|sierra 1500 regul...|     good|6 cylinders|other|   35290|       clean|       other|1GTN1TEH9FZ243281| null|null|pickup|      white|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-28T11:01:...|
+|7312824400|https://auburn.cr...|       auburn|https://auburn.cr...|32990|2019|   chevrolet|   silverado 1500 ld|     good|       null|other|    6897|       clean|       other|2GCVKNEC8K1187169| null|null|pickup|      black|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-26T10:41:...|
+|7312313815|https://auburn.cr...|       auburn|https://auburn.cr...|33990|2017|        jeep|wrangler unlimite...|     good|6 cylinders|other|   34152|       clean|       other|1C4HJWEG5HL696454|  4wd|null|   SUV|      white|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-25T09:41:...|
+|7311351407|https://auburn.cr...|       auburn|https://auburn.cr...|33990|2020|        jeep|wrangler sport su...|     good|6 cylinders|  gas|    9859|       clean|       other|1C4GJXAG9LW193038|  4wd|null| other|       null|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-23T10:10:...|
+|7310332383|https://auburn.cr...|       auburn|https://auburn.cr...|36990|2019|       volvo|s60 t6 inscriptio...|     good|       null|  gas|    8141|       clean|       other|7JRA22TL6KG004114| null|null| sedan|      white|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-21T10:11:...|
+|7310276274|https://auburn.cr...|       auburn|https://auburn.cr...|28590|2019|       volvo|s60 t5 momentum s...|     good|       null|  gas|   18531|       clean|       other|7JR102FK4KG010003|  fwd|null| sedan|      black|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-21T08:30:...|
+|7308730136|https://auburn.cr...|       auburn|https://auburn.cr...|40590|2019|        ford|f250 super duty r...|     good|8 cylinders|other|    9313|       clean|       other|1FTBF2B65KEC91136|  4wd|null|pickup|      white|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-18T09:50:...|
+|7308216849|https://auburn.cr...|       auburn|https://auburn.cr...|39590|2018|        jeep|wrangler unlimite...|     good|6 cylinders|  gas|   21893|       clean|       other|1C4HJXEGXJW175675|  4wd|null|   SUV|     silver|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-04-17T09:21:...|
++----------+--------------------+-------------+--------------------+-----+----+------------+--------------------+---------+-----------+-----+--------+------------+------------+-----------------+-----+----+------+-----------+--------------------+--------------------+------+-----+-----+------+--------------------+
+only showing top 10 rows
+
+
+
+-----------------------------------------------
+------------- Queries Testing -----------------
+-----------------------------------------------
+
+
+-----------------------------------------------
+----------------- Query 1 ---------------------
+-----------------------------------------------
+
+What's the average price and total number of listings for each car manufacturer?
+
++-------------+------------------+------------+
+| manufacturer|        avg(price)|num_listings|
++-------------+------------------+------------+
+|         ford|19226.799215686275|        5100|
+|    chevrolet| 48579.29180084221|        4037|
+|       toyota|16084.602295211713|        2527|
+|        honda| 11078.38471587198|        1531|
+|       nissan|11281.739376770538|        1412|
+|         jeep| 1074081.491766467|        1336|
+|          ram| 26673.30273141123|        1318|
+|          gmc|  22816.6647819063|        1238|
+|          bmw|18563.857416267943|        1045|
+|        dodge|13958.977317554241|        1014|
+|mercedes-benz|19705.805385556916|         817|
+|      hyundai|10512.573426573426|         715|
+|       subaru| 13180.32667617689|         701|
+|   volkswagen|12979.717125382263|         654|
+|          kia|11215.587542087542|         594|
+|        lexus| 19308.85025817556|         581|
+|         audi| 23441.10786106033|         547|
+|     cadillac|19791.952848722987|         509|
+|     chrysler|  9985.56570155902|         449|
+|        buick|14379.178997613366|         419|
++-------------+------------------+------------+
+only showing top 20 rows
+
+-----------------------------------------------
+----------------- Query 2 ---------------------
+-----------------------------------------------
+
+What is the average price and sum of listings per state?
+
++--------------------+------------+------------+
+|               state|num_listings|median_price|
++--------------------+------------+------------+
+|                null|           0|   45.382346|
+|                 ...|           1|     36990.0|
+|                 ...|           2|     18995.0|
+|                 ...|           1|     42908.0|
+|                 ...|           3|     40568.0|
+|                 ...|           1|     64995.0|
+|                 ...|           1|     19000.0|
+|                 ...|           1|     25495.0|
+|                ABS.|           1|     23888.0|
+|                S...|           1|     10681.0|
+|               X ...|           1|     26500.0|
+|             BLAC...|           1|      5977.0|
+|             X 9&...|           1|     18995.0|
+|          BROADWA...|           1|         0.0|
+|            GVWR: 5.|           1|     38250.0|
+|         INTEGRAT...|           1|     11995.0|
+|         PARKING ...|           1|     16350.0|
+|       3.16 AXLE ...|           1|     18388.0|
+|       506W REGUL...|           1|     24988.0|
+|     DOOR HANDLES...|           1|     16777.0|
++--------------------+------------+------------+
+only showing top 20 rows
+
+-----------------------------------------------
+----------------- Query 3 ---------------------
+-----------------------------------------------
+
+What percentage of postings for each state is salvaged cars?
+
++-----+----------+
+|state|percentage|
++-----+----------+
+|   ca|     21.17|
+|   nc|      8.14|
+|   tx|      7.49|
+|   nm|      4.89|
+|   pa|      4.89|
+|   ia|      4.56|
+|   sc|      3.91|
+|   mi|      3.58|
+|   mn|      3.26|
+|   ny|      2.93|
+|   az|      2.61|
+|   wi|      2.28|
+|   or|      2.28|
+|   tn|      1.95|
+|   co|      1.63|
+|   nj|      1.63|
+|   wa|      1.63|
+|   ne|      1.63|
+|   id|      1.63|
+|   la|       1.3|
++-----+----------+
+only showing top 20 rows
+
+None
+-----------------------------------------------
+----------------- Results ---------------------
+-----------------------------------------------
++--------------------+--------------+------------+-----------------+---------+
+|   Cores & Instances|   Query/Model|Dataset size|   Execution Time|CPU Usage|
++--------------------+--------------+------------+-----------------+---------+
+|2 cores & 18 inst...|Sample loading|         100|22.38568353652954|     28.6|
+|2 cores & 18 inst...|       Query 1|         100|8.279625654220581|     19.3|
+|2 cores & 18 inst...|       Query 2|         100|6.149248361587524|     18.1|
+|2 cores & 18 inst...|       Query 3|         100|10.39995789527893|     20.1|
++--------------------+--------------+------------+-----------------+---------+
+
+
+
+-----------------------------------------------
+-------------- Models Testing -----------------
+-----------------------------------------------
+
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- posting_date: date (nullable = true)
+ |-- age: double (nullable = true)
+ |-- row_num: integer (nullable = true)
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- age: double (nullable = true)
+
++-----+-----+----+---------------+--------------------+---------+------+--------+------------+------------+-----------+----+
+|index|price|year|   manufacturer|               model|condition|  fuel|odometer|title_status|transmission|       type| age|
++-----+-----+----+---------------+--------------------+---------+------+--------+------------+------------+-----------+----+
+|    0|16600|2014|          acura|      rdx technology|     good|   gas|  100784|       clean|   automatic|        SUV| 7.0|
+|    2|29999|2016|           ford|         transit xlt|excellent|   gas|   40717|       clean|   automatic|   mini-van| 5.0|
+|    3|15500|2013|          honda|              accord| like new|   gas|   60000|       clean|   automatic|      sedan| 8.0|
+|    5|19988|2014|           ford|super duty f-350 srw|excellent|   gas|  160142|       clean|   automatic|      truck| 7.0|
+|    8|19995|2018|     volkswagen|              golf s|excellent|   gas|   42524|       clean|   automatic|      wagon| 3.0|
+|    9|24999|2016|           audi| a4 premium plus awd|excellent|   gas|   54987|       clean|   automatic|      sedan| 5.0|
+|   10|19995|2004|harley-davidson|            davidson|excellent|diesel|  147939|       clean|   automatic|      truck|17.0|
+|   11|26500|2011|            ram|                2500|excellent|   gas|  129553|       clean|   automatic|     pickup|null|
+|   14|10999|2016|           ford|              fusion| like new|   gas|    3289|       clean|   automatic|      sedan| 5.0|
+|   15|20990|2010|            ram|                2500|     good|   gas|  121850|       clean|   automatic|      truck|11.0|
+|   18| 5500|2001|      chevrolet|            suburban|excellent|   gas|  200000|       clean|   automatic|        SUV|20.0|
+|   20| 8300|2004|         toyota|           avalon xl|excellent|   gas|  147772|       clean|   automatic|      sedan|17.0|
+|   21|16500|2013|          honda|            civic si|excellent|   gas|   72000|       clean|      manual|      sedan|null|
+|   22|15590|2016|      chevrolet|   cruze limited 1lt|     good|   gas|    7076|       clean|   automatic|      sedan| 5.0|
+|   23|20590|2015|     volkswagen|         eos komfort|     good|   gas|   43470|       clean|   automatic|convertible| 6.0|
+|   24|26495|2017|           jeep|            wrangler|     good|   gas|   80449|       clean|   automatic|        SUV| 4.0|
+|   27| 2795|2004|           ford|              taurus|     fair|   gas|  103095|       clean|   automatic|      sedan|17.0|
+|   37| 8950|2012|           jeep|      grand cherokee|excellent|   gas|  194664|       clean|   automatic|        SUV| 9.0|
+|   38| 6900|2014|         nissan|           altima sv|excellent|   gas|  106400|       clean|   automatic|      sedan| 7.0|
+|   40|10500|2013|            kia|             sorento|excellent|   gas|   96988|       clean|   automatic|        SUV| 8.0|
++-----+-----+----+---------------+--------------------+---------+------+--------+------------+------------+-----------+----+
+only showing top 20 rows
+
+Categorical features: ['year', 'manufacturer', 'model', 'condition', 'fuel', 'title_status', 'transmission', 'type']
+
+
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|price|odometer| age|year|manufacturer| model|condition|fuel|title_status|transmission|type|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|16600|100784.0| 7.0| 1.0|        22.0|2012.0|      1.0| 0.0|         0.0|         0.0| 1.0|
+|29999| 40717.0| 5.0| 6.0|         0.0|2292.0|      0.0| 0.0|         0.0|         0.0| 6.0|
+|15500| 60000.0| 8.0| 0.0|         3.0|   5.0|      2.0| 0.0|         0.0|         0.0| 0.0|
+|19988|160142.0| 7.0| 1.0|         0.0| 262.0|      0.0| 0.0|         0.0|         0.0| 2.0|
+|19995| 42524.0| 3.0| 8.0|        13.0|1692.0|      0.0| 0.0|         0.0|         0.0| 7.0|
+|24999| 54987.0| 5.0| 6.0|        17.0|1140.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|19995|147939.0|17.0|15.0|        36.0| 468.0|      0.0| 1.0|         0.0|         0.0| 2.0|
+|26500|129553.0|null| 5.0|         8.0|  24.0|      0.0| 0.0|         0.0|         0.0| 3.0|
+|10999|  3289.0| 5.0| 6.0|         0.0|  26.0|      2.0| 0.0|         0.0|         0.0| 0.0|
+|20990|121850.0|11.0| 7.0|         8.0|  24.0|      1.0| 0.0|         0.0|         0.0| 2.0|
+| 5500|200000.0|20.0|17.0|         1.0|  54.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+| 8300|147772.0|17.0|15.0|         2.0| 639.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|16500| 72000.0|null| 0.0|         3.0| 150.0|      0.0| 0.0|         0.0|         1.0| 0.0|
+|15590|  7076.0| 5.0| 6.0|         1.0| 170.0|      1.0| 0.0|         0.0|         0.0| 0.0|
+|20590| 43470.0| 6.0| 2.0|        13.0| 198.0|      1.0| 0.0|         0.0|         0.0| 8.0|
+|26495| 80449.0| 4.0| 4.0|         6.0|   9.0|      1.0| 0.0|         0.0|         0.0| 1.0|
+| 2795|103095.0|17.0|15.0|         0.0|  62.0|      3.0| 0.0|         0.0|         0.0| 0.0|
+| 8950|194664.0| 9.0| 3.0|         6.0|  15.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+| 6900|106400.0| 7.0| 1.0|         4.0| 632.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|10500| 96988.0| 8.0| 0.0|        14.0|  83.0|      0.0| 0.0|         0.0|         0.0| 1.0|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+only showing top 20 rows
+
+root
+ |-- price: long (nullable = true)
+ |-- odometer: double (nullable = true)
+ |-- age: double (nullable = true)
+ |-- year: double (nullable = false)
+ |-- manufacturer: double (nullable = false)
+ |-- model: double (nullable = false)
+ |-- condition: double (nullable = false)
+ |-- fuel: double (nullable = false)
+ |-- title_status: double (nullable = false)
+ |-- transmission: double (nullable = false)
+ |-- type: double (nullable = false)
+
+
+--- ML dataset ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+|16600|[100784.0,7.0,1.0...|
+|29999|(10,[0,1,2,4,9],[...|
+|15500|(10,[0,1,3,4,5],[...|
+|19988|(10,[0,1,2,4,9],[...|
+|19995|[42524.0,3.0,8.0,...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Train Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|[64000.0,17.0,15....|
+| 2000|[111000.0,15.0,12...|
+| 2000|[111802.0,5.0,6.0...|
+| 2000|[113142.0,12.0,11...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Test Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,4,9],[...|
+| 2000|[200000.0,19.0,18...|
+| 2499|(10,[0,1,2,3,4],[...|
+| 2500|[39001.0,5.0,6.0,...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Data Used for the Prediction---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 4600|[158000.0,13.0,9....|
+| 5450|(10,[0,1,2,3,4],[...|
+| 5950|(10,[0,1,2,3,4],[...|
+| 6000|[124000.0,15.0,12...|
+| 6910|[137821.0,11.0,7....|
++-----+--------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+-------------- Linear Regression --------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.46595
+Adjusted R²	: 0.46595
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 59058754.9711
+RMSE	: 7684.97
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 5771.51
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 4600|[158000.0,13.0,9....| 6164.027260925293|
+| 5450|(10,[0,1,2,3,4],[...| 7268.834895788259|
+| 5950|(10,[0,1,2,3,4],[...| 5876.458908351284|
+| 6000|[124000.0,15.0,12...|8080.5801274858895|
+| 6910|[137821.0,11.0,7....|10332.625906929228|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+---------------- Decision Tree ----------------
+-----------------------------------------------
+
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: -1.69191
+Adjusted R²	: -1.69191
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 297686964.9235
+RMSE	: 17253.61
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 10329.75
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 4600|[158000.0,13.0,9....| 9589.311572700297|
+| 5450|(10,[0,1,2,3,4],[...| 4482.841191066997|
+| 5950|(10,[0,1,2,3,4],[...| 4482.841191066997|
+| 6000|[124000.0,15.0,12...|7169.8760107816715|
+| 6910|[137821.0,11.0,7....| 6826.279109589041|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+--------- Random Forest Regression ------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.46826
+Adjusted R²	: 0.46826
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 58803187.4191
+RMSE	: 7668.32
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 5743.41
+
+	--- Predictions ---
++-----+--------------------+-----------------+
+|price|            features|       prediction|
++-----+--------------------+-----------------+
+| 4600|[158000.0,13.0,9....|8574.349612593234|
+| 5450|(10,[0,1,2,3,4],[...|8574.349612593234|
+| 5950|(10,[0,1,2,3,4],[...|8574.349612593234|
+| 6000|[124000.0,15.0,12...|8574.349612593234|
+| 6910|[137821.0,11.0,7....|8574.349612593234|
++-----+--------------------+-----------------+
+only showing top 5 rows
+
+-----------------------------------------------
+----------------- Results ---------------------
+-----------------------------------------------
++---------+--------------------+------------+------------------+--------------------+
+|CPU Usage|   Cores & Instances|Dataset size|    Execution Time|         Query/Model|
++---------+--------------------+------------+------------------+--------------------+
+|     16.5|2 cores & 18 inst...|         100| 52.28927969932556|    Liner Regression|
+|     12.6|2 cores & 18 inst...|         100|38.302875995635986|        Decison Tree|
+|     11.3|2 cores & 18 inst...|         100| 34.61962342262268|Random Forest Reg...|
++---------+--------------------+------------+------------------+--------------------+
+
++--------------------+--------------------+------------+------------------+---------+
+|   Cores & Instances|         Query/Model|Dataset size|    Execution Time|CPU Usage|
++--------------------+--------------------+------------+------------------+---------+
+|2 cores & 18 inst...|    Liner Regression|         100| 52.28927969932556|     16.5|
+|2 cores & 18 inst...|        Decison Tree|         100|38.302875995635986|     12.6|
+|2 cores & 18 inst...|Random Forest Reg...|         100| 34.61962342262268|     11.3|
++--------------------+--------------------+------------+------------------+---------+
+
+
+
+-----------------------------------------------
+----------- Sample size: 700 MB ---------------
+-----------------------------------------------
+
+
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+|        id|                 url|              region|          region_url|price|year|manufacturer|model|condition|cylinders|fuel|odometer|title_status|transmission| VIN|drive|size|type|paint_color|image_url|description|county|state| lat|long|posting_date|
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+|7222695916|https://prescott....|            prescott|https://prescott....| 6000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   az|null|null|        null|
+|7218891961|https://fayar.cra...|        fayetteville|https://fayar.cra...|11900|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ar|null|null|        null|
+|7221797935|https://keys.crai...|        florida keys|https://keys.crai...|21000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   fl|null|null|        null|
+|7222270760|https://worcester...|worcester / centr...|https://worcester...| 1500|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ma|null|null|        null|
+|7210384030|https://greensbor...|          greensboro|https://greensbor...| 4900|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   nc|null|null|        null|
+|7222379453|https://hudsonval...|       hudson valley|https://hudsonval...| 1600|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7221952215|https://hudsonval...|       hudson valley|https://hudsonval...| 1000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7220195662|https://hudsonval...|       hudson valley|https://hudsonval...|15995|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7209064557|https://medford.c...|     medford-ashland|https://medford.c...| 5000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   or|null|null|        null|
+|7219485069|https://erie.crai...|                erie|https://erie.crai...| 3000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   pa|null|null|        null|
+|7218893038|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7218325704|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7217788283|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7217147606|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7209027818|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7223509794|https://bellingha...|          bellingham|https://bellingha...|13995|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7222753076|https://bellingha...|          bellingham|https://bellingha...|24999|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7222206015|https://bellingha...|          bellingham|https://bellingha...|21850|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7220030122|https://bellingha...|          bellingham|https://bellingha...|26850|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7218423006|https://bellingha...|          bellingham|https://bellingha...|11999|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+only showing top 20 rows
+
++----------+--------------------+--------------------+--------------------+-----+----+------------+--------------------+---------+-----------+----+--------+------------+------------+-----------------+-----+----+------+-----------+--------------------+--------------------+------+-----+-----+------+--------------------+
+|        id|                 url|              region|          region_url|price|year|manufacturer|               model|condition|  cylinders|fuel|odometer|title_status|transmission|              VIN|drive|size|  type|paint_color|           image_url|         description|county|state|  lat|  long|        posting_date|
++----------+--------------------+--------------------+--------------------+-----+----+------------+--------------------+---------+-----------+----+--------+------------+------------+-----------------+-----+----+------+-----------+--------------------+--------------------+------+-----+-----+------+--------------------+
+|7222270760|https://worcester...|worcester / centr...|https://worcester...| 1500|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   ma| null|  null|                null|
+|7220195662|https://hudsonval...|       hudson valley|https://hudsonval...|15995|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   ny| null|  null|                null|
+|7218893038|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   tx| null|  null|                null|
+|7217788283|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   tx| null|  null|                null|
+|7222753076|https://bellingha...|          bellingham|https://bellingha...|24999|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   wa| null|  null|                null|
+|7220030122|https://bellingha...|          bellingham|https://bellingha...|26850|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   wa| null|  null|                null|
+|7216672204|https://bellingha...|          bellingham|https://bellingha...|24999|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   wa| null|  null|                null|
+|7212631321|https://skagit.cr...|skagit / island /...|https://skagit.cr...|21850|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   wa| null|  null|                null|
+|7219973522|https://lacrosse....|           la crosse|https://lacrosse....|  500|null|        null|                null|     null|       null|null|    null|        null|        null|             null| null|null|  null|       null|                null|                null|  null|   wi| null|  null|                null|
+|7316814884|https://auburn.cr...|              auburn|https://auburn.cr...|33590|2014|         gmc|sierra 1500 crew ...|     good|8 cylinders| gas|   57923|       clean|       other|3GTP1VEC4EG551563| null|null|pickup|      white|https://images.cr...|Carvana is the sa...|  null|   al|32.59|-85.48|2021-05-04T12:31:...|
++----------+--------------------+--------------------+--------------------+-----+----+------------+--------------------+---------+-----------+----+--------+------------+------------+-----------------+-----+----+------+-----------+--------------------+--------------------+------+-----+-----+------+--------------------+
+only showing top 10 rows
+
+
+
+-----------------------------------------------
+------------- Queries Testing -----------------
+-----------------------------------------------
+
+
+-----------------------------------------------
+----------------- Query 1 ---------------------
+-----------------------------------------------
+
+What's the average price and total number of listings for each car manufacturer?
+
++-------------+------------------+------------+
+| manufacturer|        avg(price)|num_listings|
++-------------+------------------+------------+
+|         ford| 22251.61245058188|       35918|
+|    chevrolet| 94727.95663530001|       27949|
+|       toyota|445982.04184172663|       17375|
+|        honda|10779.771978274877|       10863|
+|       nissan| 25500.25475751995|        9774|
+|         jeep|277608.94576515385|        9717|
+|          ram|28480.788060983465|        9314|
+|          gmc|23099.122206539636|        8502|
+|          bmw| 34075.08548734518|        7428|
+|        dodge|15431.729675667953|        6999|
+|mercedes-benz|1022640.4056697612|        6032|
+|      hyundai| 10877.20730783794|        5282|
+|       subaru|13147.055971702039|        4806|
+|   volkswagen|12678.887486855941|        4755|
+|          kia|11099.858133086876|        4328|
+|        lexus| 19364.52720677146|        4135|
+|         audi| 23484.72731972086|        3869|
+|     cadillac|19493.823915525114|        3504|
+|        acura|19843.563445101907|        3042|
+|     chrysler| 10505.57401912298|        3033|
++-------------+------------------+------------+
+only showing top 20 rows
+
+-----------------------------------------------
+----------------- Query 2 ---------------------
+-----------------------------------------------
+
+What is the average price and sum of listings per state?
+
++--------------------+------------+------------+
+|               state|num_listings|median_price|
++--------------------+------------+------------+
+|                null|           0|   45.382346|
+|                 ...|           1|      8991.0|
+|                 ...|           1|     23799.0|
+|                 ...|           1|     14588.0|
+|                 ...|           2|     34995.0|
+|                 ...|           1|     10987.0|
+|                 ...|           1|     36990.0|
+|                 ...|           4|     18995.0|
+|                 ...|           1|     25588.0|
+|                 ...|           1|     21995.0|
+|                 ...|           1|      7875.0|
+|                 ...|           1|     42908.0|
+|                 ...|          11|     20875.0|
+|                 ...|           1|     41500.0|
+|                 ...|           1|      7450.0|
+|                 ...|           1|     15900.0|
+|                 ...|           1|     54500.0|
+|                 ...|           1|     12250.0|
+|                 ...|           1|      8737.0|
+|                 ...|           2|     64995.0|
++--------------------+------------+------------+
+only showing top 20 rows
+
+-----------------------------------------------
+----------------- Query 3 ---------------------
+-----------------------------------------------
+
+What percentage of postings for each state is salvaged cars?
+
++-----+----------+
+|state|percentage|
++-----+----------+
+|   ca|     26.15|
+|   nc|      6.48|
+|   tx|      5.97|
+|   sc|      4.87|
+|   nm|      4.22|
+|   pa|      4.17|
+|   mn|      4.12|
+|   ia|      3.66|
+|   or|      2.81|
+|   ny|      2.26|
+|   wi|      2.06|
+|   az|      1.91|
+|   mi|      1.91|
+|   oh|      1.76|
+|   co|      1.66|
+|   id|      1.51|
+|   tn|      1.36|
+|   wa|      1.26|
+|   fl|       1.2|
+|   sd|       1.1|
++-----+----------+
+only showing top 20 rows
+
+None
+-----------------------------------------------
+----------------- Results ---------------------
+-----------------------------------------------
++--------------------+--------------+------------+------------------+---------+
+|   Cores & Instances|   Query/Model|Dataset size|    Execution Time|CPU Usage|
++--------------------+--------------+------------+------------------+---------+
+|2 cores & 18 inst...|Sample loading|         700| 19.59671688079834|      7.4|
+|2 cores & 18 inst...|       Query 1|         700| 4.443649530410767|     11.5|
+|2 cores & 18 inst...|       Query 2|         700|5.2163214683532715|      7.9|
+|2 cores & 18 inst...|       Query 3|         700| 8.595763683319092|      9.5|
++--------------------+--------------+------------+------------------+---------+
+
+
+
+-----------------------------------------------
+-------------- Models Testing -----------------
+-----------------------------------------------
+
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- posting_date: date (nullable = true)
+ |-- age: double (nullable = true)
+ |-- row_num: integer (nullable = true)
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- age: double (nullable = true)
+
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+----+
+|index|price|year|manufacturer|               model|condition|  fuel|odometer|title_status|transmission|    type| age|
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+----+
+|    2|24990|2007|        ford|super duty f-450 drw|     good|   gas|   46463|       clean|   automatic|   truck|null|
+|    3|41000|2019|        mini|        t camper van|excellent|   gas|   29288|       clean|   automatic|     van|null|
+|    4|20000|2014|        jeep|      grand cherokee| like new|   gas|  167821|       clean|   automatic|     SUV| 7.0|
+|    7|16600|2014|       acura|      rdx technology|     good|   gas|  100784|       clean|   automatic|     SUV| 7.0|
+|   11| 8950|2009|       lexus|      is 250 awd nav|     good|   gas|  134730|       clean|   automatic|   sedan|12.0|
+|   12| 6700|2014|    chrysler|                 200|     good|   gas|  110000|        lien|   automatic|   sedan| 7.0|
+|   15|34999|2014|      toyota|          tundra sr5|excellent|   gas|   47615|       clean|   automatic|   truck| 7.0|
+|   16|29999|2016|        ford|         transit xlt|excellent|   gas|   40717|       clean|   automatic|mini-van| 5.0|
+|   17|13900|2013|      toyota|             rav4 le|excellent|   gas|   92965|        lien|   automatic|     SUV| 8.0|
+|   18|10730|2011|   chevrolet|      silverado 1500|     fair|   gas|  131700|     rebuilt|   automatic|   truck|10.0|
+|   19|15500|2013|       honda|              accord| like new|   gas|   60000|       clean|   automatic|   sedan| 8.0|
+|   23|39000|2017|        ford|         transit 350|excellent|   gas|   58000|        lien|   automatic|     van|null|
+|   24|21500|2006|        ford|     f450 super duty|     good|diesel|   93182|       clean|   automatic|   truck|15.0|
+|   25|29990|2017|      nissan|titan crew cab sv...|     good|   gas|   35045|       clean|   automatic|  pickup| 4.0|
+|   29|19988|2014|        ford|super duty f-350 srw|excellent|   gas|  160142|       clean|   automatic|   truck| 7.0|
+|   30|13495|2014|         bmw|            3-series|     good|   gas|   96431|       clean|   automatic|   sedan| 7.0|
+|   33| 6490|2012|   chevrolet|malibu ls fleet 4...| like new|   gas|  131000|       clean|   automatic|   sedan| 9.0|
+|   35| 9663|2016|     hyundai|             elantra|excellent|   gas|  106992|       clean|   automatic|   sedan| 5.0|
+|   36|24990|2019|         ram| pickup 1500 classic|excellent|   gas|   21000|       clean|   automatic|  pickup| 2.0|
+|   37|23777|2017|       buick|     enclave leather|excellent|   gas|   60587|       clean|   automatic|     SUV|null|
++-----+-----+----+------------+--------------------+---------+------+--------+------------+------------+--------+----+
+only showing top 20 rows
+
+Categorical features: ['year', 'manufacturer', 'model', 'condition', 'fuel', 'title_status', 'transmission', 'type']
+
+
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|price|odometer| age|year|manufacturer| model|condition|fuel|title_status|transmission|type|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|24990| 46463.0|null|10.0|         0.0| 252.0|      1.0| 0.0|         0.0|         0.0| 2.0|
+|41000| 29288.0|null|15.0|        26.0|6533.0|      0.0| 0.0|         0.0|         0.0| 9.0|
+|20000|167821.0| 7.0| 1.0|         6.0|  13.0|      2.0| 0.0|         0.0|         0.0| 1.0|
+|16600|100784.0| 7.0| 1.0|        22.0|2335.0|      1.0| 0.0|         0.0|         0.0| 1.0|
+| 8950|134730.0|12.0|11.0|        15.0|2233.0|      1.0| 0.0|         0.0|         0.0| 0.0|
+| 6700|110000.0| 7.0| 1.0|        17.0|  65.0|      1.0| 0.0|         3.0|         0.0| 0.0|
+|34999| 47615.0| 7.0| 1.0|         2.0| 297.0|      0.0| 0.0|         0.0|         0.0| 2.0|
+|29999| 40717.0| 5.0| 6.0|         0.0|2436.0|      0.0| 0.0|         0.0|         0.0| 7.0|
+|13900| 92965.0| 8.0| 0.0|         2.0| 810.0|      0.0| 0.0|         3.0|         0.0| 1.0|
+|10730|131700.0|10.0| 5.0|         1.0|   1.0|      3.0| 0.0|         1.0|         0.0| 2.0|
+|15500| 60000.0| 8.0| 0.0|         3.0|   6.0|      2.0| 0.0|         0.0|         0.0| 0.0|
+|39000| 58000.0|null| 4.0|         0.0| 631.0|      0.0| 0.0|         3.0|         0.0| 9.0|
+|21500| 93182.0|15.0|12.0|         0.0| 606.0|      1.0| 1.0|         0.0|         0.0| 2.0|
+|29990| 35045.0| 4.0| 4.0|         4.0|1081.0|      1.0| 0.0|         0.0|         0.0| 3.0|
+|19988|160142.0| 7.0| 1.0|         0.0| 259.0|      0.0| 0.0|         0.0|         0.0| 2.0|
+|13495| 96431.0| 7.0| 1.0|         5.0| 192.0|      1.0| 0.0|         0.0|         0.0| 0.0|
+| 6490|131000.0| 9.0| 3.0|         1.0|2261.0|      2.0| 0.0|         0.0|         0.0| 0.0|
+| 9663|106992.0| 5.0| 6.0|        10.0|  28.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|24990| 21000.0| 2.0|15.0|        12.0|1547.0|      0.0| 0.0|         0.0|         0.0| 3.0|
+|23777| 60587.0|null| 4.0|        21.0| 683.0|      0.0| 0.0|         0.0|         0.0| 1.0|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+only showing top 20 rows
+
+root
+ |-- price: long (nullable = true)
+ |-- odometer: double (nullable = true)
+ |-- age: double (nullable = true)
+ |-- year: double (nullable = false)
+ |-- manufacturer: double (nullable = false)
+ |-- model: double (nullable = false)
+ |-- condition: double (nullable = false)
+ |-- fuel: double (nullable = false)
+ |-- title_status: double (nullable = false)
+ |-- transmission: double (nullable = false)
+ |-- type: double (nullable = false)
+
+
+--- ML dataset ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 6299|(10,[0,1,2,3,4],[...|
+|22988|[27325.0,2.0,15.0...|
+|15995|(10,[0,1,2,3,4],[...|
+|26590|[42163.0,4.0,4.0,...|
+| 5000|[180000.0,13.0,7....|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Train Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Test Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,4,5],[...|
+| 2000|[90000.0,18.0,16....|
+| 2000|[92000.0,18.0,16....|
+| 2000|[110000.0,7.0,1.0...|
+| 2000|[113142.0,12.0,11...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Data Used for the Prediction---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2500|[123869.0,6.0,2.0...|
+| 2750|[145000.0,18.0,16...|
+| 2800|[185000.0,19.0,17...|
+| 2999|[184794.0,16.0,13...|
+| 3199|[145688.0,19.0,17...|
++-----+--------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+-------------- Linear Regression --------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.46481
+Adjusted R²	: 0.46481
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 55872383.9322
+RMSE	: 7474.78
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 5634.93
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2500|[123869.0,6.0,2.0...|18164.598911355817|
+| 2750|[145000.0,18.0,16...|3031.7120127553717|
+| 2800|[185000.0,19.0,17...| 3062.549173070329|
+| 2999|[184794.0,16.0,13...| 2374.732250620309|
+| 3199|[145688.0,19.0,17...| 2760.701880347944|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+---------------- Decision Tree ----------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: -0.05451
+Adjusted R²	: -0.05451
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 110088126.6639
+RMSE	: 10492.29
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 5499.82
+
+	--- Predictions ---
++-----+--------------------+-----------------+
+|price|            features|       prediction|
++-----+--------------------+-----------------+
+| 2500|[123869.0,6.0,2.0...|18077.10648148148|
+| 2750|[145000.0,18.0,16...|4716.685143742468|
+| 2800|[185000.0,19.0,17...|4716.685143742468|
+| 2999|[184794.0,16.0,13...|4716.685143742468|
+| 3199|[145688.0,19.0,17...|48555.15789473684|
++-----+--------------------+-----------------+
+only showing top 5 rows
+
+-----------------------------------------------
+--------- Random Forest Regression ------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.53944
+Adjusted R²	: 0.53944
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 48081182.6613
+RMSE	: 6934.06
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 5192.68
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2500|[123869.0,6.0,2.0...|15942.665838090365|
+| 2750|[145000.0,18.0,16...| 8826.662890061789|
+| 2800|[185000.0,19.0,17...| 8826.662890061789|
+| 2999|[184794.0,16.0,13...| 8826.662890061789|
+| 3199|[145688.0,19.0,17...| 8826.662890061789|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+----------------- Results ---------------------
+-----------------------------------------------
++--------------------+--------------------+------------+------------------+---------+
+|   Cores & Instances|         Query/Model|Dataset size|    Execution Time|CPU Usage|
++--------------------+--------------------+------------+------------------+---------+
+|2 cores & 18 inst...|    Liner Regression|         700|54.442248582839966|     10.1|
+|2 cores & 18 inst...|       Decision Tree|         700| 39.06857633590698|      9.5|
+|2 cores & 18 inst...|Random Forest Reg...|         700| 36.81922698020935|     11.3|
++--------------------+--------------------+------------+------------------+---------+
+
+
+
+-----------------------------------------------
+----------- Sample size: 1.3 GB ---------------
+-----------------------------------------------
+
+
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+|        id|                 url|              region|          region_url|price|year|manufacturer|model|condition|cylinders|fuel|odometer|title_status|transmission| VIN|drive|size|type|paint_color|image_url|description|county|state| lat|long|posting_date|
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+|7222695916|https://prescott....|            prescott|https://prescott....| 6000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   az|null|null|        null|
+|7218891961|https://fayar.cra...|        fayetteville|https://fayar.cra...|11900|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ar|null|null|        null|
+|7221797935|https://keys.crai...|        florida keys|https://keys.crai...|21000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   fl|null|null|        null|
+|7222270760|https://worcester...|worcester / centr...|https://worcester...| 1500|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ma|null|null|        null|
+|7210384030|https://greensbor...|          greensboro|https://greensbor...| 4900|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   nc|null|null|        null|
+|7222379453|https://hudsonval...|       hudson valley|https://hudsonval...| 1600|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7221952215|https://hudsonval...|       hudson valley|https://hudsonval...| 1000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7220195662|https://hudsonval...|       hudson valley|https://hudsonval...|15995|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   ny|null|null|        null|
+|7209064557|https://medford.c...|     medford-ashland|https://medford.c...| 5000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   or|null|null|        null|
+|7219485069|https://erie.crai...|                erie|https://erie.crai...| 3000|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   pa|null|null|        null|
+|7218893038|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7218325704|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7217788283|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7217147606|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7209027818|https://elpaso.cr...|             el paso|https://elpaso.cr...|    0|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   tx|null|null|        null|
+|7223509794|https://bellingha...|          bellingham|https://bellingha...|13995|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7222753076|https://bellingha...|          bellingham|https://bellingha...|24999|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7222206015|https://bellingha...|          bellingham|https://bellingha...|21850|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7220030122|https://bellingha...|          bellingham|https://bellingha...|26850|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
+|7218423006|https://bellingha...|          bellingham|https://bellingha...|11999|null|        null| null|     null|     null|null|    null|        null|        null|null| null|null|null|       null|     null|       null|  null|   wa|null|null|        null|
++----------+--------------------+--------------------+--------------------+-----+----+------------+-----+---------+---------+----+--------+------------+------------+----+-----+----+----+-----------+---------+-----------+------+-----+----+----+------------+
+only showing top 20 rows
+
+
+
+-----------------------------------------------
+------------- Queries Testing -----------------
+-----------------------------------------------
+
+
+-----------------------------------------------
+----------------- Query 1 ---------------------
+-----------------------------------------------
+
+What's the average price and total number of listings for each car manufacturer?
+
++-------------+------------------+------------+
+| manufacturer|        avg(price)|num_listings|
++-------------+------------------+------------+
+|         ford|36411.718024934846|       70985|
+|    chevrolet|115676.10164535813|       55064|
+|       toyota|234294.68262089937|       34202|
+|        honda|  10751.3637218487|       21269|
+|       nissan| 18827.33282634919|       19067|
+|         jeep| 150717.8196591985|       19014|
+|          ram|27728.339166939266|       18342|
+|          gmc|30405.877152219244|       16785|
+|          bmw|26740.261446356893|       14699|
+|        dodge|15003.200554461224|       13707|
+|mercedes-benz| 531710.5573326563|       11817|
+|      hyundai|10719.659411878507|       10338|
+|       subaru|13055.512585571354|        9495|
+|   volkswagen|  12537.0987693954|        9345|
+|          kia|11083.324819676009|        8457|
+|        lexus| 19206.15268292683|        8200|
+|         audi|23574.849993397598|        7573|
+|     cadillac|  19439.5209262189|        6953|
+|     chrysler|10442.946609185872|        6031|
+|        acura|19842.869521579123|        5978|
++-------------+------------------+------------+
+only showing top 20 rows
+
+-----------------------------------------------
+----------------- Query 2 ---------------------
+-----------------------------------------------
+
+What is the average price and sum of listings per state?
+
++--------------------+------------+------------+
+|               state|num_listings|median_price|
++--------------------+------------+------------+
+|                null|           0|   45.382346|
+|                 ...|           1|      8991.0|
+|                 ...|           1|     23799.0|
+|                 ...|           1|     14588.0|
+|                 ...|           1|         0.0|
+|                 ...|           2|     34995.0|
+|                 ...|           1|     10987.0|
+|                 ...|           1|     36990.0|
+|                 ...|           1|     21675.0|
+|                 ...|           1|     30987.0|
+|                 ...|           6|     16997.0|
+|                 ...|           1|      4000.0|
+|                 ...|           1|     25588.0|
+|                 ...|           1|     19900.0|
+|                 ...|           1|     16096.0|
+|                 ...|           1|     21995.0|
+|                 ...|           1|      7875.0|
+|                 ...|           2|     42908.0|
+|                 ...|          26|     20875.0|
+|                 ...|           1|     41500.0|
++--------------------+------------+------------+
+only showing top 20 rows
+
+-----------------------------------------------
+----------------- Query 3 ---------------------
+-----------------------------------------------
+
+What percentage of postings for each state is salvaged cars?
+
++-----+----------+
+|state|percentage|
++-----+----------+
+|   ca|      25.8|
+|   nc|      7.01|
+|   tx|      6.31|
+|   sc|      4.94|
+|   ia|      4.14|
+|   pa|      3.93|
+|   nm|      3.85|
+|   mn|       3.7|
+|   or|       3.0|
+|   mi|      2.09|
+|   az|      1.94|
+|   ny|      1.89|
+|   oh|      1.86|
+|   wi|      1.81|
+|   co|      1.58|
+|   id|       1.5|
+|   tn|      1.37|
+|   sd|      1.34|
+|   fl|      1.34|
+|   nj|      1.29|
++-----+----------+
+only showing top 20 rows
+
+None
+-----------------------------------------------
+----------------- Results ---------------------
+-----------------------------------------------
++--------------------+--------------+------------+------------------+---------+
+|   Cores & Instances|   Query/Model|Dataset size|    Execution Time|CPU Usage|
++--------------------+--------------+------------+------------------+---------+
+|2 cores & 18 inst...|Sample loading|        1300|42.647618532180786|      8.5|
+|2 cores & 18 inst...|       Query 1|        1300|11.982370376586914|      5.3|
+|2 cores & 18 inst...|       Query 2|        1300| 4.781973361968994|      9.4|
+|2 cores & 18 inst...|       Query 3|        1300| 8.554416418075562|      7.3|
++--------------------+--------------+------------+------------------+---------+
+
+
+
+-----------------------------------------------
+-------------- Models Testing -----------------
+-----------------------------------------------
+
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- posting_date: date (nullable = true)
+ |-- age: double (nullable = true)
+ |-- row_num: integer (nullable = true)
+
+root
+ |-- index: long (nullable = false)
+ |-- price: string (nullable = true)
+ |-- year: string (nullable = true)
+ |-- manufacturer: string (nullable = true)
+ |-- model: string (nullable = true)
+ |-- condition: string (nullable = true)
+ |-- fuel: string (nullable = true)
+ |-- odometer: string (nullable = true)
+ |-- title_status: string (nullable = true)
+ |-- transmission: string (nullable = true)
+ |-- type: string (nullable = true)
+ |-- age: double (nullable = true)
+
++-----+-----+----+-------------+--------------------+---------+------+--------+------------+------------+-----------+----+
+|index|price|year| manufacturer|               model|condition|  fuel|odometer|title_status|transmission|       type| age|
++-----+-----+----+-------------+--------------------+---------+------+--------+------------+------------+-----------+----+
+|    0| 6299|2008|        honda|              accord|excellent|   gas|  189431|       clean|   automatic|      sedan|13.0|
+|    2|22988|2019|         jeep|            cherokee|excellent|   gas|   27325|       clean|   automatic|        SUV| 2.0|
+|    3|15995|2015|          kia|              optima|excellent|   gas|   90148|       clean|   automatic|      sedan| 6.0|
+|    6|26590|2017|       toyota|rav4 hybrid se sport|     good|hybrid|   42163|       clean|   automatic|        SUV| 4.0|
+|    7| 5000|2008|        honda|               civic|     good|   gas|  180000|       clean|   automatic|      sedan|13.0|
+|   10|14495|2013|          bmw|            3-series|     good|   gas|   94346|       clean|   automatic|      sedan| 8.0|
+|   11| 7600|2008|         mini|      cooper clubman|     good|   gas|   76991|       clean|   automatic|      coupe|13.0|
+|   13| 6497|2009|       subaru|forester 2.5i pre...|     good|   gas|  154000|       clean|   automatic|      wagon|12.0|
+|   14| 4400|2008|        honda|               civic|excellent|   gas|  113455|       clean|      manual|      coupe|13.0|
+|   15|10995|2012|       toyota|        camry hybrid|     good|hybrid|   89194|       clean|   automatic|      sedan| 9.0|
+|   17|17990|2013|        acura|  tl sh-awd sedan 4d|     good|   gas|   56504|       clean|   automatic|      sedan| 8.0|
+|   19|15970|2014|        dodge|          charger se|excellent|   gas|   90776|       clean|   automatic|      other| 7.0|
+|   20|38499|2017|mercedes-benz|               e 400|excellent|   gas|   21000|       clean|   automatic|convertible| 4.0|
+|   21| 8999|2018|          kia|            forte lx|excellent|   gas|   89000|       clean|   automatic|      sedan| 3.0|
+|   22| 7975|2010|          gmc|          acadia awd|excellent|   gas|  198000|       clean|   automatic|        SUV|11.0|
+|   24|13995|2011|mercedes-benz|             e-class|excellent|   gas|  105738|       clean|   automatic|      wagon|10.0|
+|   27|30000|2016|        honda|             odyssey| like new|   gas|    9450|     salvage|   automatic|        van| 5.0|
+|   28|18999|2015|     cadillac|                 srx|excellent|   gas|   69154|       clean|   automatic|        SUV| 6.0|
+|   29|26590|2013|     infiniti|g g37 convertible 2d|     good|   gas|   38468|       clean|   automatic|      other| 8.0|
+|   32|24995|2015|       toyota|          highlander|excellent|   gas|   83169|       clean|   automatic|        SUV| 6.0|
++-----+-----+----+-------------+--------------------+---------+------+--------+------------+------------+-----------+----+
+only showing top 20 rows
+
+Categorical features: ['year', 'manufacturer', 'model', 'condition', 'fuel', 'title_status', 'transmission', 'type']
+
+
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+|price|odometer| age|year|manufacturer| model|condition|fuel|title_status|transmission|type|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+| 6299|189431.0|13.0| 7.0|         3.0|   6.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|22988| 27325.0| 2.0|15.0|         6.0|  92.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+|15995| 90148.0| 6.0| 3.0|        14.0|  67.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+|26590| 42163.0| 4.0| 5.0|         2.0|2898.0|      1.0| 2.0|         0.0|         0.0| 1.0|
+| 5000|180000.0|13.0| 7.0|         3.0|   4.0|      1.0| 0.0|         0.0|         0.0| 0.0|
+|14495| 94346.0| 8.0| 0.0|         5.0| 162.0|      1.0| 0.0|         0.0|         0.0| 0.0|
+| 7600| 76991.0|13.0| 7.0|        26.0| 480.0|      1.0| 0.0|         0.0|         0.0| 5.0|
+| 6497|154000.0|12.0|11.0|        11.0| 290.0|      1.0| 0.0|         0.0|         0.0| 6.0|
+| 4400|113455.0|13.0| 7.0|         3.0|   4.0|      0.0| 0.0|         0.0|         1.0| 5.0|
+|10995| 89194.0| 9.0| 2.0|         2.0| 376.0|      1.0| 2.0|         0.0|         0.0| 0.0|
+|17990| 56504.0| 8.0| 0.0|        21.0|2513.0|      1.0| 0.0|         0.0|         0.0| 0.0|
+|15970| 90776.0| 7.0| 1.0|         7.0| 588.0|      0.0| 0.0|         0.0|         0.0|10.0|
+|38499| 21000.0| 4.0| 5.0|        10.0| 952.0|      0.0| 0.0|         0.0|         0.0| 8.0|
+| 8999| 89000.0| 3.0| 9.0|        14.0| 403.0|      0.0| 0.0|         0.0|         0.0| 0.0|
+| 7975|198000.0|11.0| 8.0|         8.0|1155.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+|13995|105738.0|10.0| 4.0|        10.0|  97.0|      0.0| 0.0|         0.0|         0.0| 6.0|
+|30000|  9450.0| 5.0| 6.0|         3.0|  27.0|      2.0| 0.0|         2.0|         0.0| 9.0|
+|18999| 69154.0| 6.0| 3.0|        19.0| 105.0|      0.0| 0.0|         0.0|         0.0| 1.0|
+|26590| 38468.0| 8.0| 0.0|        20.0| 659.0|      1.0| 0.0|         0.0|         0.0|10.0|
+|24995| 83169.0| 6.0| 3.0|         2.0|  46.0|      0.0| 0.0|         0.0|         0.0| 1.0|
++-----+--------+----+----+------------+------+---------+----+------------+------------+----+
+only showing top 20 rows
+
+root
+ |-- price: long (nullable = true)
+ |-- odometer: double (nullable = true)
+ |-- age: double (nullable = true)
+ |-- year: double (nullable = false)
+ |-- manufacturer: double (nullable = false)
+ |-- model: double (nullable = false)
+ |-- condition: double (nullable = false)
+ |-- fuel: double (nullable = false)
+ |-- title_status: double (nullable = false)
+ |-- transmission: double (nullable = false)
+ |-- type: double (nullable = false)
+
+
+--- ML dataset ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 6299|(10,[0,1,2,3,4],[...|
+|22988|[27325.0,2.0,15.0...|
+|15995|(10,[0,1,2,3,4],[...|
+|26590|[42163.0,4.0,5.0,...|
+| 5000|[180000.0,13.0,7....|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Train Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|(10,[0,1,2,3,4],[...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Test Data ---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2000|(10,[0,1,2,3,4],[...|
+| 2000|[14517.0,1.0,18.0...|
+| 2000|[101954.0,5.0,6.0...|
+| 2000|[109479.0,9.0,2.0...|
+| 2000|[111000.0,15.0,12...|
++-----+--------------------+
+only showing top 5 rows
+
+
+--- Data Used for the Prediction---
+
++-----+--------------------+
+|price|            features|
++-----+--------------------+
+| 2300|[100000.0,17.0,14...|
+| 2500|[39001.0,5.0,6.0,...|
+| 2500|[160000.0,19.0,17...|
+| 2600|[167000.0,18.0,16...|
+| 2800|[179800.0,17.0,14...|
++-----+--------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+-------------- Linear Regression --------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.46339
+Adjusted R²	: 0.46339
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 56465384.0035
+RMSE	: 7514.35
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 5631.60
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2300|[100000.0,17.0,14...| 5750.846593404545|
+| 2500|[39001.0,5.0,6.0,...|21352.653801101977|
+| 2500|[160000.0,19.0,17...| 3515.502079924914|
+| 2600|[167000.0,18.0,16...|1644.1538651336377|
+| 2800|[179800.0,17.0,14...|3414.4772575998068|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+---------------- Decision Tree ----------------
+-----------------------------------------------
+23/05/02 17:57:05 WARN org.apache.spark.scheduler.DAGScheduler: Broadcasting large task binary with size 1000.9 KiB
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.21547
+Adjusted R²	: 0.21547
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 82551996.0366
+RMSE	: 9085.81
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 4720.43
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2300|[100000.0,17.0,14...| 4909.390465561224|
+| 2500|[39001.0,5.0,6.0,...|12609.465807375582|
+| 2500|[160000.0,19.0,17...| 4909.390465561224|
+| 2600|[167000.0,18.0,16...| 4909.390465561224|
+| 2800|[179800.0,17.0,14...| 4909.390465561224|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+--------- Random Forest Regression ------------
+-----------------------------------------------
+
+	--- Coefficient of Determination (R² & Adjusted R²) ---
+R²		: 0.59162
+Adjusted R²	: 0.59162
+
+	--- Mean Squared Error (MSE & RMSE) ---
+MSE	: 42971451.0380
+RMSE	: 6555.26
+
+	--- Mean Absolute Error (MAE) ---
+MAE	: 4952.86
+
+	--- Predictions ---
++-----+--------------------+------------------+
+|price|            features|        prediction|
++-----+--------------------+------------------+
+| 2300|[100000.0,17.0,14...|11943.276088071358|
+| 2500|[39001.0,5.0,6.0,...|15937.538362192323|
+| 2500|[160000.0,19.0,17...| 9312.907043627281|
+| 2600|[167000.0,18.0,16...| 9312.907043627281|
+| 2800|[179800.0,17.0,14...| 9312.907043627281|
++-----+--------------------+------------------+
+only showing top 5 rows
+
+-----------------------------------------------
+----------------- Results ---------------------
+-----------------------------------------------
++--------------------+--------------------+------------+------------------+---------+
+|   Cores & Instances|         Query/Model|Dataset size|    Execution Time|CPU Usage|
++--------------------+--------------------+------------+------------------+---------+
+|2 cores & 18 inst...|    Liner Regression|        1300| 52.54881739616394|      8.1|
+|2 cores & 18 inst...|       Decision Tree|        1300|44.952330112457275|      8.4|
+|2 cores & 18 inst...|Random Forest Reg...|        1300|38.228243589401245|      8.7|
++--------------------+--------------------+------------+------------------+---------+
+
+
+-----------------------------------------------
+--------------- All Results -------------------
+-----------------------------------------------
+
++--------------------+--------------------+------------+------------------+---------+
+|   Cores & Instances|         Query/Model|Dataset size|    Execution Time|CPU Usage|
++--------------------+--------------------+------------+------------------+---------+
+|2 cores & 18 inst...|      Sample loading|         100| 22.38568353652954|     28.6|
+|2 cores & 18 inst...|             Query 1|         100| 8.279625654220581|     19.3|
+|2 cores & 18 inst...|             Query 2|         100| 6.149248361587524|     18.1|
+|2 cores & 18 inst...|             Query 3|         100| 10.39995789527893|     20.1|
+|2 cores & 18 inst...|    Liner Regression|         100| 52.28927969932556|     16.5|
+|2 cores & 18 inst...|        Decison Tree|         100|38.302875995635986|     12.6|
+|2 cores & 18 inst...|Random Forest Reg...|         100| 34.61962342262268|     11.3|
+|2 cores & 18 inst...|      Sample loading|         700| 19.59671688079834|      7.4|
+|2 cores & 18 inst...|             Query 1|         700| 4.443649530410767|     11.5|
+|2 cores & 18 inst...|             Query 2|         700|5.2163214683532715|      7.9|
+|2 cores & 18 inst...|             Query 3|         700| 8.595763683319092|      9.5|
+|2 cores & 18 inst...|    Liner Regression|         700|54.442248582839966|     10.1|
+|2 cores & 18 inst...|       Decision Tree|         700| 39.06857633590698|      9.5|
+|2 cores & 18 inst...|Random Forest Reg...|         700| 36.81922698020935|     11.3|
+|2 cores & 18 inst...|      Sample loading|        1300|42.647618532180786|      8.5|
+|2 cores & 18 inst...|             Query 1|        1300|11.982370376586914|      5.3|
+|2 cores & 18 inst...|             Query 2|        1300| 4.781973361968994|      9.4|
+|2 cores & 18 inst...|             Query 3|        1300| 8.554416418075562|      7.3|
+|2 cores & 18 inst...|    Liner Regression|        1300| 52.54881739616394|      8.1|
+|2 cores & 18 inst...|       Decision Tree|        1300|44.952330112457275|      8.4|
++--------------------+--------------------+------------+------------------+---------+
+only showing top 20 rows
